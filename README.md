@@ -1,1 +1,3 @@
-Notes for responsive portfolio
+## Responsive Portfolio! 
+
+Description goes here
