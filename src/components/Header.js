@@ -6,9 +6,11 @@ function Header(props) {
     const [state, setState] = useState('Starter state');
 
     return (
-        <div>
-            <h1>{state}</h1>
-        </div>
+        <header>
+            <div className="header-name">
+                <h1 className="">Hans Accola</h1>
+            </div>
+        </header>
     );
 };
 
