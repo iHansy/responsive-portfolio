@@ -1,8 +1,11 @@
-
-
 Ideas / Planning
 
 - Moq ups?
+Nav Links
+    - About Me
+    - Projects
+    - Technologies
+    - Contact
 
 ---------------------------------
 
