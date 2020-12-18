@@ -1,12 +1,12 @@
 import './App.css';
+import Header from './components/Header.js';
 
 function App() {
   return (
     <>
       <div className="app">
-        <header className="app-header">
         <h1>Hans's Portfolio!!</h1>
-        </header>
+        <Header/>
       </div>
     </>
   );
