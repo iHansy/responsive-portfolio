@@ -6,7 +6,7 @@ function Header(props) {
     const [state, setState] = useState('Starter state');
 
     return (
-        <header>
+        <header className="header-container">
             <div className="header-name-container">
                 <h1 className="header-name">Hans Accola</h1>
             </div>
