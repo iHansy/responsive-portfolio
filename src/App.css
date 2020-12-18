@@ -7,3 +7,7 @@
 .app {
   font-family: 'Poppins', sans-serif;
 }
+
+.header-name-container {
+  display: flex;
+}
