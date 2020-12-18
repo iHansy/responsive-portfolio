@@ -6,9 +6,17 @@ function AboutMe(props) {
     const [state, setState] = useState('Starter state');
 
     return (
-       <div>
-           <img src="" />
-       </div>
+        <div>
+            <div>
+                <img src="headshot-4.jpg" alt="Girl in a jacket" width="300" height="300"></img>
+            </div>
+            <div>
+                <p>About me description goes here!</p>
+            </div>
+            <div>
+                
+            </div>
+        </div>
     );
 };
 
