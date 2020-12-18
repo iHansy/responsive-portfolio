@@ -13,7 +13,7 @@ function Header(props) {
             </div>
             <nav className="header-nav-container">
                 <ul className="header-nav-links">
-                    <li><Button><a className="header-nav-link" href="#">About</a></Button></li>
+                    <li><Button><a className="header-nav-link" href="#">About Me</a></Button></li>
                     <li><Button><a className="header-nav-link" href="#">Projects</a></Button></li>
                     <li><Button><a className="header-nav-link" href="#">Technologies</a></Button></li>
                     <li><Button><a className="header-nav-link" href="#">Contact</a></Button></li>
