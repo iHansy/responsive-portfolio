@@ -36,3 +36,29 @@
 .header-nav-container {
   flex: 1;
 }
+
+.aboutme-container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  height: 60vh;
+}
+
+.aboutme-img-container, .aboutme-description {
+  display: flex;
+}
+
+.aboutme-img-container {
+  flex: 1;
+  justify-content: space-around;
+  border-radius: 20px;
+}
+
+.aboutme-img {
+  border-radius: 20em;
+}
+
+.aboutme-description {
+  flex: 1;
+}
