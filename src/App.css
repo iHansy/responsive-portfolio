@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 .app {
   font-family: 'Poppins', sans-serif;
 }
@@ -56,9 +57,24 @@
 }
 
 .aboutme-img {
-  border-radius: 20em;
+  border-radius: 20rem;
+  height: 65%;
+  width: 65%;
+  animation: drop 2s ease;
+  filter: drop-shadow(0px 7px 5px gray);
 }
 
 .aboutme-description {
   flex: 1;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
