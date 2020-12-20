@@ -43,7 +43,6 @@
   width: 80%;
   margin: auto;
   align-items: center;
-  height: 60vh;
 }
 
 .aboutme-img-container, .aboutme-description {
@@ -72,7 +71,7 @@
 @keyframes drop {
   0% {
     opacity: 0;
-    transform: translateY(-80px);
+    transform: translateY(-100px);
   }
   100% {
     opacity: 1;
