@@ -43,6 +43,7 @@
   width: 80%;
   margin: auto;
   align-items: center;
+  height: 60vh;
 }
 
 .aboutme-img-container, .aboutme-description {
@@ -52,14 +53,16 @@
 .aboutme-img-container {
   flex: 1;
   justify-content: space-around;
-  border-radius: 20px;
+  align-items: center;
 }
 
 .aboutme-img {
   border-radius: 20rem;
   height: 65%;
   width: 65%;
-  animation: drop 2s ease;
+  max-height: 350px;
+  max-width: 350px;
+  animation: drop 1.5s ease;
   filter: drop-shadow(0px 7px 5px gray);
 }
 
@@ -71,7 +74,7 @@
 @keyframes drop {
   0% {
     opacity: 0;
-    transform: translateY(-100px);
+    transform: translateY(-80px);
   }
   100% {
     opacity: 1;
@@ -79,8 +82,14 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 825px) {
   .aboutme-container {
     flex-direction: column;
+    text-align: center;
+    height: 20vh;
+    background: cyan;
+  }
+  .header-nav-links {
+    display: none;
   }
 }
