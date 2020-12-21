@@ -22,7 +22,7 @@
 }
 
 .header-nav-links {
-  justify-content: space-around;
+  justify-content: space-between;
   list-style: none;
 }
 
@@ -33,9 +33,11 @@
 
 .header-name-container {
   flex: 1;
+  /* background: cyan; */
 }
 .header-nav-container {
-  flex: 1.25;
+  flex: .85;
+  /* background: red; */
 }
 
 .aboutme-container {
@@ -62,7 +64,7 @@
   width: 65%;
   max-height: 350px;
   max-width: 350px;
-  animation: drop 1.5s ease;
+  animation: drop 1.75s ease;
   filter: drop-shadow(0px 7px 5px gray);
 }
 
@@ -70,11 +72,13 @@
   flex: 1;
 }
 
+/* -------------------------- */
+/* media queries and keyframes below here  */
 /* this is the drop animation for the headshot image */
 @keyframes drop {
   0% {
     opacity: 0;
-    transform: translateY(-80px);
+    transform: translateY(-40px);
   }
   100% {
     opacity: 1;
@@ -88,14 +92,30 @@
     text-align: center;
     width: 90%;
   }
-  .header-nav-links {
-    display: none;
-  }
   .aboutme-img {
     height: 30vh;
     width: 30vh;
   }
   .aboutme-description {
     padding: 20px 0px 0px 0px;
+  }
+  .header-container {
+    justify-content: center;
+    margin: auto;
+  }
+  .header-nav-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header-nav-container {
+    flex: 1.2;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header-nav-container {
+    flex: 1.7;
   }
 }
