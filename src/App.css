@@ -31,9 +31,8 @@
   list-style: none;
 }
 
-.header-nav-link {
-  color: #5f5f79;
-  text-decoration: none;
+.header-nav-texts {
+  color: rgb(136, 136, 143);
 }
 
 .header-name-container {

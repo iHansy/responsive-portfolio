@@ -13,10 +13,10 @@ function Header(props) {
             </div>
             <nav className="header-nav-container">
                 <ul className="header-nav-links">
-                    <li><Button><a className="header-nav-link" href="#">About Me</a></Button></li>
-                    <li><Button><a className="header-nav-link" href="#">Projects</a></Button></li>
-                    <li><Button><a className="header-nav-link" href="#">Technologies</a></Button></li>
-                    <li><Button><a className="header-nav-link" href="#">Contact</a></Button></li>
+                    <li><Button className="btn-nav-link"><p className="header-nav-texts">About Me</p></Button></li>
+                    <li><Button className="btn-nav-link"><p className="header-nav-texts">Projects</p></Button></li>
+                    <li><Button className="btn-nav-link"><p className="header-nav-texts">Technologies</p></Button></li>
+                    <li><Button className="btn-nav-link"><p className="header-nav-texts">Contact</p></Button></li>
                 </ul>
             </nav>
         </header>
