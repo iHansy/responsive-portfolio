@@ -15,6 +15,9 @@
   margin: auto;
   height: 15vh;
   align-items: center;
+  /* position: fixed;
+  top: 0; */
+  background: cyan;
 }
 
 .header-name-container, .header-nav-links {
@@ -45,7 +48,7 @@
   width: 80%;
   margin: auto;
   align-items: center;
-  height: 60vh;
+  min-height: 50vh;
 }
 
 .aboutme-img-container, .aboutme-description {

@@ -1,11 +1,21 @@
 Ideas / Planning
 
+animate js libraries:
+animxyz.js
+
 - Moq ups?
 Nav Links
     - About Me
     - Projects
     - Technologies
     - Contact
+
+[] Static header / shadow
+[] Mobile hamburger drawer
+[] Add resume
+
+[] Learn single page application, how to link to page sections ect
+[] Start on other sections, start with mobile first
 
 ---------------------------------
 
