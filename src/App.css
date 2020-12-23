@@ -12,12 +12,12 @@
 .header-container {
   display: flex;
   width: 80%;
-  margin: auto;
-  height: 15vh;
+  height: 10vh;
   align-items: center;
-  /* position: fixed;
-  top: 0; */
-  background: cyan;
+  position: fixed;
+  top: 0;
+  margin-left: 10%;
+  background: white;
 }
 
 .header-name-container, .header-nav-links {
@@ -49,6 +49,7 @@
   margin: auto;
   align-items: center;
   min-height: 50vh;
+  margin-top: 10%;
 }
 
 .aboutme-img-container, .aboutme-description {
@@ -59,6 +60,8 @@
   flex: 1;
   justify-content: space-around;
   align-items: center;
+  margin-top: 20%;
+  z-index: -20;
 }
 
 .aboutme-img {
@@ -104,7 +107,6 @@
   }
   .header-container {
     justify-content: center;
-    margin: auto;
   }
   .header-nav-container {
     display: none;
