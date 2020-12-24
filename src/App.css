@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.test {
+  background:rgb(66, 125, 202);
+}
+
 .app {
   font-family: 'Poppins', sans-serif;
 }
@@ -32,6 +36,12 @@
 
 .header-nav-texts {
   color: rgb(136, 136, 143);
+  width: 96.08px;
+  height: 36px;
+}
+
+.header-nav-texts:hover {
+  color: rgb(233, 233, 233);
 }
 
 .header-name-container {

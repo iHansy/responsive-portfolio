@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     navBtn: {
         '&:hover': {
-          backgroundColor: 'rgb(190, 200, 210)',
+          backgroundColor: 'rgb(66, 125, 202)',
           borderColor: '#0062cc',
           boxShadow: 'none',
         },

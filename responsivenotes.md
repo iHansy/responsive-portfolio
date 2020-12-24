@@ -1,5 +1,8 @@
 Ideas / Planning
 
+custom cursor
+animation when hovering mouse over name
+
 animate js libraries:
 animxyz.js
 
@@ -10,7 +13,7 @@ Nav Links
     - Technologies
     - Contact
 
-[] Static header / shadow
+[x] Static header / shadow
 [] hover styling for nav links
 [] Mobile hamburger drawer
 [] Add resume
