@@ -14,7 +14,7 @@ Nav Links
     - Contact
 
 [x] Static header / shadow
-[] hover styling for nav links
+[x] hover styling for nav links
 [] Mobile hamburger drawer
 [] Add resume
 
