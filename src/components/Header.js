@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 import { Button } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 
 //custom material ui styling
 const useStyles = makeStyles((theme) => ({
-    navBtn: {
-        '&:hover': {
-          backgroundColor: 'rgb(66, 125, 202)',
-          borderColor: '#0062cc',
-          boxShadow: 'none',
-        },
-    }
+  //not currently being used
 }));
+
+const ColorButton = withStyles((theme) => ({
+    root: {
+      color: 'primary',
+      '&:hover': {
+        backgroundColor: 'cyan',
+        color: 'black',
+      },
+    },
+  }))(Button);
 
 function Header(props) {
 
@@ -28,7 +32,7 @@ function Header(props) {
             </div>
             <nav className="header-nav-container">
                 <ul className="header-nav-links">
-                    <li><Button className={classes.navBtn}><p className="header-nav-texts">About Me</p></Button></li>
+                    <li><ColorButton>About Me</ColorButton></li>
                     <li><Button className={classes.navBtn}><p className="header-nav-texts">Projects</p></Button></li>
                     <li><Button className={classes.navBtn}><p className="header-nav-texts">Technologies</p></Button></li>
                     <li><Button className={classes.navBtn}><p className="header-nav-texts">Contact</p></Button></li>
