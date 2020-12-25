@@ -36,8 +36,6 @@
 
 .header-nav-texts {
   color: rgb(136, 136, 143);
-  width: 96.08px;
-  height: 36px;
 }
 
 .header-nav-texts:hover {
@@ -45,11 +43,12 @@
 }
 
 .header-name-container {
-  flex: 1;
+  flex: .95;
   margin-left: 10%;
+  text-align: center;
 }
 .header-nav-container {
-  flex: .85;
+  flex: .70;
   margin-right: 5%;
 }
 
@@ -137,12 +136,12 @@
 
 @media screen and (max-width: 1200px) {
   .header-nav-container {
-    flex: 1.2;
+    flex: .90;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .header-nav-container {
-    flex: 1.7;
+    flex: 1.4;
   }
 }
