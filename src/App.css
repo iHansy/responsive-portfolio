@@ -5,7 +5,7 @@
 }
 
 .test {
-  background:rgb(66, 125, 202);
+  background:#0e63d3;
 }
 
 .app {
@@ -32,14 +32,6 @@
 .header-nav-links {
   justify-content: space-between;
   list-style: none;
-}
-
-.header-nav-texts {
-  color: rgb(136, 136, 143);
-}
-
-.header-nav-texts:hover {
-  color: rgb(233, 233, 233);
 }
 
 .header-name-container {

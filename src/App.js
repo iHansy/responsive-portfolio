@@ -7,20 +7,21 @@ const theme = createMuiTheme({
   overrides: {
     MuiButton: {
       root: {
-        backgroundColor: '#303030',
-        color: '#ffffff',
+        //not using yet
       },
     },
   },
   palette: {
     primary: {
-      main: 'rgb(136, 136, 143)',
+      main: '#0e63d3',
     },
     secondary: {
-      main: '#01FF70',
+      //not in use
+      main: '#000000',
     },
     textPrimary: {
-      main: '#ffffff',
+      main: '#808080',
+      second: '#ffffff',
     },
   },
 });

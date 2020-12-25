@@ -9,10 +9,10 @@ const useStyles = makeStyles((theme) => ({
 
 const ColorButton = withStyles((theme) => ({
     root: {
-      color: 'primary',
+        color: theme.palette.textPrimary.main,
       '&:hover': {
-        backgroundColor: 'cyan',
-        color: 'black',
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.textPrimary.second,
       },
     },
   }))(Button);
@@ -33,9 +33,9 @@ function Header(props) {
             <nav className="header-nav-container">
                 <ul className="header-nav-links">
                     <li><ColorButton>About Me</ColorButton></li>
-                    <li><Button className={classes.navBtn}><p className="header-nav-texts">Projects</p></Button></li>
-                    <li><Button className={classes.navBtn}><p className="header-nav-texts">Technologies</p></Button></li>
-                    <li><Button className={classes.navBtn}><p className="header-nav-texts">Contact</p></Button></li>
+                    <li><ColorButton>Projects</ColorButton></li>
+                    <li><ColorButton>Technologies</ColorButton></li>
+                    <li><ColorButton>Contact</ColorButton></li>
                 </ul>
             </nav>
         </header>
