@@ -38,7 +38,7 @@
   flex: .95;
   margin-left: 10%;
 }
-.header-nav-container {
+.header-nav-links-container {
   flex: .70;
   margin-right: 5%;
 }
@@ -120,7 +120,13 @@
   .header-container {
     justify-content: center;
   }
-  .header-nav-container {
+  .header-nav-links-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 826px) {
+  .header-nav-menu-container {
     display: none;
   }
 }
@@ -141,13 +147,13 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .header-nav-container {
+  .header-nav-links-container {
     flex: .90;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .header-nav-container {
+  .header-nav-links-container {
     flex: 1.4;
   }
 }
