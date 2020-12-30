@@ -10,6 +10,16 @@ const theme = createMuiTheme({
         fontFamily: 'Poppins',
       },
     },
+    MuiTypography: {
+      root: {
+        fontFamily: 'Poppins',
+      }
+    },
+    MuiListItemText: {
+      root: {
+        fontFamily: 'Poppins',
+      }
+    },
   },
   palette: {
     primary: {

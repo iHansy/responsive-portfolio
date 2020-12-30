@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import { Button, SwipeableDrawer, List, ListItem, ListItemIcon, ListItemText }
-  from '@material-ui/core';
+import { Button, SwipeableDrawer, List, ListItem, 
+        ListItemIcon, ListItemText, Divider } from '@material-ui/core';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import MailIcon from '@material-ui/icons/Mail';
@@ -63,14 +63,17 @@ function Header(props) {
           <ListItemIcon><StarsIcon /></ListItemIcon>
           <ListItemText primary='About Me' />
         </ListItem>
+        <Divider />
         <ListItem button>
           <ListItemIcon><ComputerIcon /></ListItemIcon>
           <ListItemText primary='Technologies' />
         </ListItem>
+        <Divider />
         <ListItem button>
           <ListItemIcon><SimCardIcon /></ListItemIcon>
           <ListItemText primary='Projects' />
         </ListItem>
+        <Divider />
         <ListItem button>
           <ListItemIcon><MailIcon /></ListItemIcon>
           <ListItemText primary='Contact' />
