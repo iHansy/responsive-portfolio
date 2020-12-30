@@ -15,7 +15,7 @@ Nav Links
 
 [x] Static header / shadow
 [x] hover styling for nav links
-[] Mobile hamburger drawer / make height of list higher
+[x] Mobile hamburger drawer
 [] Add resume
 
 [] Learn single page application, how to link to page sections ect
