@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import { Button, SwipeableDrawer, List, ListItem, 
-        ListItemIcon, ListItemText, Divider } from '@material-ui/core';
+import {
+  Button, SwipeableDrawer, List, ListItem,
+  ListItemIcon, ListItemText, Divider
+} from '@material-ui/core';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import MailIcon from '@material-ui/icons/Mail';
@@ -13,6 +15,9 @@ import SimCardIcon from '@material-ui/icons/SimCard';
 const useStyles = makeStyles((theme) => ({
   list: {
     width: 250,
+  },
+  muiList: {
+    padding: '0px',
   },
   fullList: {
     width: 'auto',
@@ -32,6 +37,17 @@ const ColorButton = withStyles((theme) => ({
     },
   },
 }))(Button);
+
+const ColorListItem = withStyles((theme) => ({
+  root: {
+    color: theme.palette.textPrimary.main,
+    '&:hover': {
+      backgroundColor: theme.palette.primary.main,
+      color: theme.palette.textPrimary.second,
+    },
+    height: '65px',
+  },
+}))(ListItem);
 
 function Header(props) {
 
@@ -62,26 +78,27 @@ function Header(props) {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        <ListItem button>
+      <List className={classes.muiList}>
+        <ColorListItem button>
           <ListItemIcon><StarsIcon /></ListItemIcon>
           <ListItemText primary='About Me' />
-        </ListItem>
+        </ColorListItem>
         <Divider />
-        <ListItem button>
+        <ColorListItem button>
           <ListItemIcon><ComputerIcon /></ListItemIcon>
           <ListItemText primary='Technologies' />
-        </ListItem>
+        </ColorListItem>
         <Divider />
-        <ListItem button>
+        <ColorListItem button>
           <ListItemIcon><SimCardIcon /></ListItemIcon>
           <ListItemText primary='Projects' />
-        </ListItem>
+        </ColorListItem>
         <Divider />
-        <ListItem button>
+        <ColorListItem button>
           <ListItemIcon><MailIcon /></ListItemIcon>
           <ListItemText primary='Contact' />
-        </ListItem>
+        </ColorListItem>
+        <Divider />
       </List>
     </div>
   );
