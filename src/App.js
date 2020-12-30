@@ -7,7 +7,7 @@ const theme = createMuiTheme({
   overrides: {
     MuiButton: {
       root: {
-        //not using yet
+        fontFamily: 'Poppins',
       },
     },
   },
