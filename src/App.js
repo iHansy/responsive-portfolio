@@ -11,9 +11,15 @@ const theme = createMuiTheme({
       },
     },
     MuiTypography: {
+      root: {
+        fontFamily: 'Poppins',
+      },
       body1: {
         fontFamily: 'Poppins',
-      }
+      },
+      body2: {
+        fontFamily: 'Poppins',
+      },
     },
   },
   palette: {
