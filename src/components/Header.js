@@ -34,8 +34,8 @@ function Header(props) {
             <nav className="header-nav-links-container">
                 <ul className="header-nav-links">
                     <li><ColorButton>About Me</ColorButton></li>
-                    <li><ColorButton>Projects</ColorButton></li>
                     <li><ColorButton>Technologies</ColorButton></li>
+                    <li><ColorButton>Projects</ColorButton></li>
                     <li><ColorButton>Contact</ColorButton></li>
                 </ul>
             </nav>
