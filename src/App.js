@@ -11,12 +11,7 @@ const theme = createMuiTheme({
       },
     },
     MuiTypography: {
-      root: {
-        fontFamily: 'Poppins',
-      }
-    },
-    MuiListItemText: {
-      root: {
+      body1: {
         fontFamily: 'Poppins',
       }
     },
