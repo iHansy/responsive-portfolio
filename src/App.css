@@ -146,6 +146,12 @@
   }
 }
 
+@media screen and (max-width: 300px) {
+  .header-name {
+    font-size: 27px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .header-nav-links-container {
     flex: .90;
@@ -157,3 +163,5 @@
     flex: 1.4;
   }
 }
+
+/* STYLING FOR HEADER ABOVE THIS */

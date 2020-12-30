@@ -16,7 +16,11 @@ const useStyles = makeStyles((theme) => ({
   },
   fullList: {
     width: 'auto',
-  }
+  },
+  menuIcon: {
+    height: '30px',
+    width: '30px',
+  },
 }));
 
 const ColorButton = withStyles((theme) => ({
@@ -97,7 +101,7 @@ function Header(props) {
       </nav>
       <nav className="header-nav-menu-container">
         <div>
-          <ColorButton onClick={toggleDrawer('right', true)}><MenuRoundedIcon /></ColorButton>
+          <ColorButton onClick={toggleDrawer('right', true)}><MenuRoundedIcon className={classes.menuIcon} /></ColorButton>
           <SwipeableDrawer
             anchor={'right'}
             open={state['right']}
