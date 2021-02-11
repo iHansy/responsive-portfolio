@@ -19,6 +19,7 @@ Nav Links
 [] Add resume
 
 [] Learn single page application, how to link to page sections ect
+[] Learn about a contact me form, use "email.js"?
 [] Start on other sections, start with mobile first
 
 ---------------------------------
