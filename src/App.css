@@ -39,7 +39,7 @@
   margin-left: 10%;
 }
 .header-nav-links-container {
-  flex: .70;
+  flex: .60;
   margin-right: 5%;
 }
 
@@ -154,13 +154,13 @@
 
 @media screen and (max-width: 1200px) {
   .header-nav-links-container {
-    flex: .90;
+    flex: .80;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .header-nav-links-container {
-    flex: 1.4;
+    flex: 1.25;
   }
 }
 
