@@ -10,6 +10,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import StarsIcon from '@material-ui/icons/Stars';
 import ComputerIcon from '@material-ui/icons/Computer';
 import SimCardIcon from '@material-ui/icons/SimCard';
+import CloseIcon from '@material-ui/icons/Close';
 
 //custom material ui styling
 const useStyles = makeStyles((theme) => ({
@@ -26,6 +27,12 @@ const useStyles = makeStyles((theme) => ({
     height: '30px',
     width: '30px',
   },
+  menuClose: {
+    color: 'black',
+    marginLeft: '22vh',
+    height: '35px',
+    width: '35px',
+  }
 }));
 
 const ColorButton = withStyles((theme) => ({
@@ -79,6 +86,10 @@ function Header(props) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List className={classes.muiList}>
+      <ColorListItem button>
+          <ListItemIcon><CloseIcon className={classes.menuClose} /></ListItemIcon>
+        </ColorListItem>
+        <Divider />
         <ColorListItem button>
           <ListItemIcon><StarsIcon /></ListItemIcon>
           <ListItemText primary='About Me' />
