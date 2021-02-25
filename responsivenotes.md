@@ -16,11 +16,12 @@ Nav Links
 [x] Static header / shadow
 [x] hover styling for nav links
 [x] Mobile hamburger drawer
-[] Add resume
+[x] Add resume
 
 [] Learn single page application, how to link to page sections ect
 [] Learn about a contact me form, use "email.js"?
 [] Start on other sections, start with mobile first
+[] Refactor CSS files to each section
 
 ---------------------------------
 
