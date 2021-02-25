@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Technologies.css';
 
 function Technologies(props) {
 
@@ -6,8 +7,8 @@ function Technologies(props) {
     const [state, setState] = useState('Starter state');
 
     return (
-       <div>
-           <h1>Technologies go here</h1>
+       <div className="technologies-container">
+           {/* <h1>Technologies go here</h1> */}
        </div>
     );
 };
