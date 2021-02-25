@@ -20,7 +20,7 @@ function AboutMe(props) {
                     <li>Taking typing speed tests on 10fastfingers.com, max so far is 150+ WPM</li>
                 </ul>
                 <p className="aboutme-p2">My professional experience started in 2017 as an inside medical sales rep. After that I worked in IT / IoT services testing and configuring indoor tracking devices (RTLS). Unfortunately, due to COVID I got laid off. But that opened a new door to pursue my dream of becoming a software engineer! With that spark I earned a certification in Full-Stack Software Engineering at Prime Digital Academy here in Minneapolis. Currently, I am learning Java through a course on Udemy.</p>
-                <a className="resume-link" href="/images/hans-accola-resume.pdf">Click here to check out my resume!</a>
+                <a className="resume-link" href="/images/hans-accola-resume.pdf" target="_blank">Click here to check out my resume!</a>
             </div>
         </div>
     );
