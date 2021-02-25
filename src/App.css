@@ -75,6 +75,9 @@
 
 .aboutme-description {
   flex: 1;
+  background-color: cyan;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* -------------------------- */
