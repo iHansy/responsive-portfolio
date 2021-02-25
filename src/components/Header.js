@@ -106,7 +106,7 @@ function Header(props) {
   return (
     <header className="header-container">
       <div className="header-name-container">
-        <h1 className="header-name">Hans Accola</h1>
+        <h1 className="header-name"><span className="first-letter-color">H</span>ans <span className="first-letter-color">A</span>ccola</h1>
       </div>
       <nav className="header-nav-links-container">
         <ul className="header-nav-links">

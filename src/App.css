@@ -87,6 +87,10 @@
   margin-bottom: 2vh;
 }
 
+.first-letter-color {
+  color: #2545fd;
+}
+
 /* -------------------------- */
 /* media queries and keyframes below here  */
 /* this is the drop animation for the headshot image */

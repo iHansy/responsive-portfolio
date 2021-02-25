@@ -15,7 +15,7 @@ function AboutMe(props) {
                 <p className="aboutme-p1">Hi there, I’m Hans Accola. Nice to meet you! I’m originally from Norway but moved to Minnesota when I was a child and have been here ever since. Here are a few of my favorite things to do outside of coding:</p>
                 <ul className="aboutme-list">
                     <li>Going on hikes with my amazing fiancé, Marie</li>
-                    <li>Playing basketball and going to the gym</li>
+                    <li>Playing basketball and working out at the gym</li>
                     <li>Bringing my 95lb black lab to the doggo park</li>
                     <li>Taking typing speed tests on 10fastfingers.com, max WPM so far is 150+</li>
                 </ul>
