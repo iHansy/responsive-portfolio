@@ -1,7 +1,8 @@
 import './App.css';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import Header from './components/Header.js';
 import AboutMe from './components/AboutMe.js';
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import Technologies from './components/Technologies.js';
 
 const theme = createMuiTheme({
   overrides: {
@@ -43,6 +44,7 @@ function App() {
       <div className="app">
         <Header />
         <AboutMe />
+        <Technologies />
       </div>
     </ThemeProvider>
   );
