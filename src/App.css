@@ -94,6 +94,13 @@
 .resume-link {
   margin-top: 2vh;
   margin-bottom: 4vh;
+  color: #2545fd;
+  text-decoration: none;
+
+}
+
+.resume-link:hover {
+  text-decoration: underline;
 }
 
 /* -------------------------- */
