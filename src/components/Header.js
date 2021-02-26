@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuClose: {
     color: 'black',
-    marginLeft: '27vh',
+    marginLeft: '22vh',
     height: '32px',
     width: '32px',
   }
@@ -86,7 +86,7 @@ function Header(props) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List className={classes.muiList}>
-      <ColorListItem button>
+        <ColorListItem button>
           <ListItemIcon><CloseIcon className={classes.menuClose} /></ListItemIcon>
         </ColorListItem>
         <Divider />
