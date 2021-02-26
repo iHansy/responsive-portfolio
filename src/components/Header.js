@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuClose: {
     color: 'black',
-    marginLeft: '22vh',
+    marginLeft: '26vw',
     height: '32px',
     width: '32px',
   }
