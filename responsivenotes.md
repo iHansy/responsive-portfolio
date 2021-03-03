@@ -23,7 +23,9 @@ Nav Links
 [] Learn single page application, how to link to page sections ect
 [] Learn about a contact me form, use "email.js"?
 [] Start on other sections, start with mobile first
-[] Refactor CSS files to each section
+[x] Refactor CSS files to each section
+
+[] Add an "easter egg" animation game
 
 ---------------------------------
 
