@@ -5,6 +5,7 @@ animation when hovering mouse over name
 
 animate js libraries:
 animxyz.js
+animate.js 3d?
 
 - Moq ups?
 Nav Links
