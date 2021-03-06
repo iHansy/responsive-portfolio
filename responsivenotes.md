@@ -26,7 +26,7 @@ Nav Links
 [] Start on other sections, start with mobile first
 [x] Refactor CSS files to each section
 
-[] Add an "easter egg" animation game
+[] Add an "easter egg" animation game, will include database high score
 
 ---------------------------------
 
