@@ -19,7 +19,7 @@ Nav Links
 [x] Mobile hamburger drawer
 [x] Add resume
 
-[] Create divider in between each section
+[] Create divider in between each section with styling
 
 [] Learn single page application, how to link to page sections ect
 [] Learn about a contact me form, use "email.js"?
