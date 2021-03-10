@@ -4,7 +4,7 @@ import './AboutMe.css';
 function AboutMe(props) {
 
     // Using hooks we're creating local state
-    const [state, setState] = useState('Starter state');
+    const [state, setState] = useState('Starter state'); // not being used
 
     return (
         <div className="aboutme-container">
