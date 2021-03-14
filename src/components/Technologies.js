@@ -8,7 +8,7 @@ function Technologies(props) {
 
     return (
        <div className="technologies-container">
-           {/* <h1>Technologies go here</h1> */}
+           <h1>Technologies go here</h1>
        </div>
     );
 };
