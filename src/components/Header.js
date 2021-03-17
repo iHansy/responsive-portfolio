@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 import clsx from 'clsx';
 import {
   Button, SwipeableDrawer, List, ListItem,
@@ -124,7 +125,9 @@ function Header(props) {
           <li><ColorButton>About Me</ColorButton></li>
           <li><ColorButton>Technologies</ColorButton></li>
           <li><ColorButton>Projects</ColorButton></li>
-          <li><ColorButton>Contact</ColorButton></li>
+          <Link to="./Contact.js">
+            <li><ColorButton>Contact</ColorButton></li>
+          </Link>
         </ul>
       </nav>
       <nav className="header-nav-menu-container">
