@@ -125,7 +125,14 @@ function Header(props) {
           <li><ColorButton>About Me</ColorButton></li>
           <li><ColorButton>Technologies</ColorButton></li>
           <li><ColorButton>Projects</ColorButton></li>
-          <Link to="./Contact.js">
+          <Link
+            to="contact"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
             <li><ColorButton>Contact</ColorButton></li>
           </Link>
         </ul>
