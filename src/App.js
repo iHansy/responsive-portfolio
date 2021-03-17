@@ -5,6 +5,7 @@ import AboutMe from './components/AboutMe.js';
 import Technologies from './components/Technologies.js';
 import Projects from './components/Projects.js';
 import Contact from './components/Contact.js';
+import Footer from './components/Footer.js';
 
 const theme = createMuiTheme({
   overrides: {
@@ -49,6 +50,7 @@ function App() {
         <Technologies />
         <Projects />
         <Contact />
+        <Footer />
       </div>
     </ThemeProvider>
   );
