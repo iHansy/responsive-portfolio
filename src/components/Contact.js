@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Contact.css';
 
 function Contact(props) {
 
@@ -6,7 +7,7 @@ function Contact(props) {
     const [state, setState] = useState('Starter state');
 
     return (
-       <div>
+       <div className='contact-container'>
            <h1>Contact form goes here</h1>
        </div>
     );

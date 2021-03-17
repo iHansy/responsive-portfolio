@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Projects.css';
 
 function Projects(props) {
 
@@ -6,7 +7,7 @@ function Projects(props) {
     const [state, setState] = useState('Starter state');
 
     return (
-       <div>
+       <div className="projects-container">
            <h1>Projects go here</h1>
        </div>
     );
