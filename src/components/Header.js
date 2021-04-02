@@ -96,10 +96,19 @@ function Header(props) {
           <ListItemText primary='About Me' />
         </ColorListItem>
         <Divider />
-        <ColorListItem button>
-          <ListItemIcon><ComputerIcon /></ListItemIcon>
-          <ListItemText primary='Technologies' />
-        </ColorListItem>
+        <Link
+          to="Technologies"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          <ColorListItem button>
+            <ListItemIcon><ComputerIcon /></ListItemIcon>
+            <ListItemText primary='Technologies' />
+          </ColorListItem>
+        </Link>
         <Divider />
         <ColorListItem button>
           <ListItemIcon><SimCardIcon /></ListItemIcon>

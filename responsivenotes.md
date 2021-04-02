@@ -28,6 +28,8 @@ Nav Links
 
 [] Add an "easter egg" animation game, will include database high score
 
+[] Refactor list items to functions (get rid of repeat code)
+
 ---------------------------------
 
 Here I'm scoping out my project, adding code snippets of ideas to use or what not.
