@@ -7,7 +7,7 @@ function AboutMe(props) {
     const [state, setState] = useState('Starter state'); // not being used
 
     return (
-        <div className="aboutme-container">
+        <div className="aboutme-container" id="About-Me">
             <div className="aboutme-img-container">
                 <img className="aboutme-img" src="/images/headshot-4.jpg" alt="Headshot of Hans Accola"></img>
             </div>

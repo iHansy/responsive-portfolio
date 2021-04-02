@@ -7,7 +7,7 @@ function Contact(props) {
     const [state, setState] = useState('Starter state');
 
     return (
-       <div className='contact-container' id="contact">
+       <div className='contact-container' id="Contact">
            <h1>Contact form goes here</h1>
        </div>
     );

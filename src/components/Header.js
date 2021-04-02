@@ -122,11 +122,38 @@ function Header(props) {
       </div>
       <nav className="header-nav-links-container">
         <ul className="header-nav-links">
-          <li><ColorButton>About Me</ColorButton></li>
-          <li><ColorButton>Technologies</ColorButton></li>
-          <li><ColorButton>Projects</ColorButton></li>
           <Link
-            to="contact"
+            to="About-Me"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <li><ColorButton>About Me</ColorButton></li>
+          </Link>
+          <Link
+            to="Technologies"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <li><ColorButton>Technologies</ColorButton></li>
+          </Link>
+          <Link
+            to="Projects"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <li><ColorButton>Projects</ColorButton></li>
+          </Link>
+          <Link
+            to="Contact"
             activeClass="active"
             spy={true}
             smooth={true}

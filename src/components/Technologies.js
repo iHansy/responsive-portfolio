@@ -7,7 +7,7 @@ function Technologies(props) {
     const [state, setState] = useState('Starter state');
 
     return (
-       <div className="technologies-container">
+       <div className="technologies-container" id="Technologies">
            <h1>Technologies go here</h1>
        </div>
     );

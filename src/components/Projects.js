@@ -7,7 +7,7 @@ function Projects(props) {
     const [state, setState] = useState('Starter state');
 
     return (
-       <div className="projects-container">
+       <div className="projects-container" id="Projects">
            <h1>Projects go here</h1>
        </div>
     );
