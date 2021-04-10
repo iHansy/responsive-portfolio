@@ -77,10 +77,14 @@ function Header(props) {
     setState({ ...state, [anchor]: open });
   };
 
+  const closeDrawer = (e) => {
+    console.log('TESTING CLOSE');
+  }
+
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {
-        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
+        [classes.fullList]: anchor === 'right'
       })}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
@@ -91,10 +95,20 @@ function Header(props) {
           <ListItemIcon><CloseIcon className={classes.menuClose} /></ListItemIcon>
         </ColorListItem>
         <Divider />
-        <ColorListItem button>
-          <ListItemIcon><StarsIcon /></ListItemIcon>
-          <ListItemText primary='About Me' />
-        </ColorListItem>
+        <Link
+          to="About-Me"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          onClick={toggleDrawer('right', false)}
+        >
+          <ColorListItem button>
+            <ListItemIcon><StarsIcon /></ListItemIcon>
+            <ListItemText primary='About Me' />
+          </ColorListItem>
+        </Link>
         <Divider />
         <Link
           to="Technologies"
@@ -103,25 +117,46 @@ function Header(props) {
           smooth={true}
           offset={-70}
           duration={500}
+          onClick={toggleDrawer('right', false)}
         >
           <ColorListItem button>
             <ListItemIcon><ComputerIcon /></ListItemIcon>
             <ListItemText primary='Technologies' />
           </ColorListItem>
+          <Divider />
+        </Link>
+        <Link
+          to="Projects"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          onClick={toggleDrawer('right', false)}
+        >
+          <ColorListItem button>
+            <ListItemIcon><SimCardIcon /></ListItemIcon>
+            <ListItemText primary='Projects' />
+          </ColorListItem>
         </Link>
         <Divider />
-        <ColorListItem button>
-          <ListItemIcon><SimCardIcon /></ListItemIcon>
-          <ListItemText primary='Projects' />
-        </ColorListItem>
-        <Divider />
-        <ColorListItem button>
-          <ListItemIcon><MailIcon /></ListItemIcon>
-          <ListItemText primary='Contact' />
-        </ColorListItem>
+        <Link
+          to="Contact"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          onClick={toggleDrawer('right', false)}
+        >
+          <ColorListItem button>
+            <ListItemIcon><MailIcon /></ListItemIcon>
+            <ListItemText primary='Contact' />
+          </ColorListItem>
+        </Link>
         <Divider />
       </List>
-    </div>
+    </div >
   );
 
   return (
