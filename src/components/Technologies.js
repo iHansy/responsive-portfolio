@@ -7,18 +7,18 @@ function Technologies(props) {
     // Using hooks we're creating local state
     const [state, setState] = useState({
         icons: [
-            'css', 
-            'html', 
-            'java', 
-            'python', 
-            'javascript', 
-            'react', 
-            'vue', 
-            'mui', 
-            'node', 
-            'npm', 
-            'postgresql', 
-            'heroku', 
+            'css',
+            'html',
+            'java',
+            'python',
+            'javascript',
+            'react',
+            'vue',
+            'mui',
+            'node',
+            'npm',
+            'postgresql',
+            'heroku',
             'github'
         ]
     });
@@ -26,9 +26,13 @@ function Technologies(props) {
     return (
         <div className="technologies-container" id="Technologies">
             <h1>Technologies go here</h1>
-            {state.icons.map((icon, i) => {
-                <p>{icon}</p>
-            })}
+            <ul>
+                {state.icons.map((icon, i) => {
+                    return (
+                        <p key={i}>{icon} test</p>
+                    )
+                })}
+            </ul>
         </div>
     );
 };
