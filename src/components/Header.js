@@ -29,8 +29,9 @@ const useStyles = makeStyles((theme) => ({
     width: '30px',
   },
   menuClose: {
+    position: 'relative',
+    left: '240%',
     color: 'black',
-    marginLeft: '26vw',
     height: '32px',
     width: '32px',
   }
