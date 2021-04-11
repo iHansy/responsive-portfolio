@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
 import './Technologies.css';
-import IconAmazonwebservices from 'react-devicon/amazonwebservices/original'
 
 function Technologies(props) {
 
     // Using hooks we're creating local state
     const [state, setState] = useState({
-        icons: [
-            'css',
-            'html',
-            'java',
-            'python',
-            'javascript',
-            'react',
-            'vue',
-            'mui',
-            'node',
-            'npm',
-            'postgresql',
-            'heroku',
-            'github'
+        iconImages: [
+            '/images/css.png',
+            '/images/html.png',
+            '/images/java.png',
+            '/images/python.png',
+            '/images/javascript.png',
+            '/images/react.png',
+            '/images/vue.png',
+            '/images/mui.png',
+            '/images/node.png',
+            '/images/npm.png',
+            '/images/postgresql.png',
+            '/images/heroku.png',
+            '/images/github.png'
         ]
     });
 
@@ -27,9 +26,9 @@ function Technologies(props) {
         <div className="technologies-container" id="Technologies">
             <h1>Technologies go here</h1>
             <ul>
-                {state.icons.map((icon, i) => {
+                {state.iconImages.map((icon, i) => {
                     return (
-                        <p key={i}>{icon} test</p>
+                        <img key={i} src={icon} alt={icon}/>
                     )
                 })}
             </ul>
