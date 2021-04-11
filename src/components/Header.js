@@ -47,6 +47,15 @@ const ColorButton = withStyles((theme) => ({
   },
 }))(Button);
 
+const MenuButton = withStyles((theme) => ({
+  root: {
+    color: theme.palette.textPrimary.main,
+    '&:hover': {
+      backgroundColor: 'transparent',
+    },
+  },
+}))(Button);
+
 const ColorListItem = withStyles((theme) => ({
   root: {
     color: theme.palette.textPrimary.main,
@@ -92,7 +101,7 @@ function Header(props) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List className={classes.muiList}>
-        <ColorListItem button onClick={toggleDrawer('right', false)}>
+        <ColorListItem button>
           <ListItemIcon><CloseIcon className={classes.menuClose} /></ListItemIcon>
         </ColorListItem>
         <Divider />
@@ -211,7 +220,7 @@ function Header(props) {
       </nav>
       <nav className="header-nav-menu-container">
         <div>
-          <ColorButton onClick={toggleDrawer('right', true)}><MenuRoundedIcon className={classes.menuIcon} /></ColorButton>
+          <MenuButton onClick={toggleDrawer('right', true)}><MenuRoundedIcon className={classes.menuIcon} /></MenuButton>
           <SwipeableDrawer
             anchor={'right'}
             open={state['right']}
