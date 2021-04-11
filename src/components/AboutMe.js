@@ -13,7 +13,7 @@ function AboutMe(props) {
             </div>
             <div className="aboutme-description">
                 <h1 className="aboutme-welcome">WELCOME!</h1>
-                <p className="aboutme-p1">Hi there, I’m Hans Accola. Nice to meet you! I’m originally from Norway but moved to Minnesota when I was a child and have lived here ever since. Here are a few of my favorite things to do outside of coding:</p>
+                <p className="aboutme-p1">Hi there, I’m Hans Accola, a full-stack software developer. Nice to meet you! I’m originally from Norway but moved to Minnesota when I was a child and have lived here ever since. Here are a few of my favorite things to do outside of coding:</p>
                 <ul className="aboutme-list">
                     <li>Going on hikes with my amazing fiancé, Marie</li>
                     <li>Playing basketball and working out at the gym</li>

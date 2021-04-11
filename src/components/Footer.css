@@ -1,3 +1,7 @@
 .footer-container {
-    height: 100px;
+    min-height: 100px;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
 }

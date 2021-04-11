@@ -34,12 +34,11 @@
 
 .aboutme-container {
   display: flex;
-  width: 80%;
+  width: 90%;
   margin: auto;
   align-items: center;
-  min-height: 50vh;
+  min-height: 100vh;
   margin-top: 3vh;
-  height: 100vh;
 }
 
 .aboutme-img-container, .aboutme-description {
