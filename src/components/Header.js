@@ -92,7 +92,7 @@ function Header(props) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List className={classes.muiList}>
-        <ColorListItem button>
+        <ColorListItem button onClick={toggleDrawer('right', false)}>
           <ListItemIcon><CloseIcon className={classes.menuClose} /></ListItemIcon>
         </ColorListItem>
         <Divider />
