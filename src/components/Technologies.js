@@ -1,10 +1,22 @@
 import React, { useState } from 'react';
 import './Technologies.css';
-import { makeStyles, Grid, Card, CardContent} from '@material-ui/core';
+import { makeStyles, Grid, Card, CardContent, Typography } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1
+    },
+    card: {
+        height: 150,
+        width: 175,
+        margin: 'auto'
+    }
+}));
 
 export default function Technologies(props) {
 
-    // Using hooks we're creating local state
+    const classes = useStyles();
+    const [spacing, setSpacing] = useState(6);
     const [state, setState] = useState({
         iconImages: [
             '/images/css.png',
@@ -25,14 +37,18 @@ export default function Technologies(props) {
 
     return (
         <div className="technologies-container" id="Technologies">
-            <h1>Technologies go here</h1>
-            <ul>
-                {state.iconImages.map((icon, i) => {
-                    return (
-                        <img key={i} src={icon} alt={icon}/>
-                    )
-                })}
-            </ul>
+            <Typography variant="h3">Technologies go here</Typography>
+            <Grid container className={classes.root}>
+                <Grid item xs={12}>
+                    <Grid container justify="center" spacing={spacing}>
+                        {state.iconImages.map((icon, i) => (
+                            <Grid item key={icon}>
+                                    <img src={icon} alt={icon} />
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Grid>
+            </Grid>
         </div>
     );
 };
