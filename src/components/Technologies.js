@@ -44,6 +44,9 @@ export default function Technologies(props) {
                         {state.iconImages.map((icon, i) => (
                             <Grid item key={icon}>
                                     <img src={icon} alt={icon} />
+                                    <Typography>
+                                        {icon}
+                                    </Typography>
                             </Grid>
                         ))}
                     </Grid>
