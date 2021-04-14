@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './AboutMe.css';
 
-function AboutMe(props) {
+export default function AboutMe(props) {
 
     // Using hooks we're creating local state
     const [state, setState] = useState('Starter state'); // not being used
@@ -26,5 +26,3 @@ function AboutMe(props) {
         </div>
     );
 };
-
-export default AboutMe;

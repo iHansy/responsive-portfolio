@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css';
 
-function Contact(props) {
+export default function Contact(props) {
 
     // Using hooks we're creating local state
     const [state, setState] = useState('Starter state');
@@ -12,5 +12,3 @@ function Contact(props) {
        </div>
     );
 };
-
-export default Contact;

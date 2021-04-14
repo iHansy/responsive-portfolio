@@ -67,7 +67,7 @@ const ColorListItem = withStyles((theme) => ({
   },
 }))(ListItem);
 
-function Header(props) {
+export default function Header(props) {
 
   //for styles
   const classes = useStyles();
@@ -234,5 +234,3 @@ function Header(props) {
     </header>
   );
 };
-
-export default Header;

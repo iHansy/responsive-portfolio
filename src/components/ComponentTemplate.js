@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ComponentTemplate(props) {
+export default function ComponentTemplate(props) {
 
     // Using hooks we're creating local state
     const [state, setState] = useState('Starter state');
@@ -11,5 +11,3 @@ function ComponentTemplate(props) {
        </div>
     );
 };
-
-export default ComponentTemplate;

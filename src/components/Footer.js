@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Footer.css';
 
-function Footer(props) {
+export default function Footer(props) {
 
     // Using hooks we're creating local state
     const [state, setState] = useState('Starter state');
@@ -12,5 +12,3 @@ function Footer(props) {
        </div>
     );
 };
-
-export default Footer;

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Technologies.css';
+import { makeStyles, Grid, Card, CardContent} from '@material-ui/core';
 
-function Technologies(props) {
+export default function Technologies(props) {
 
     // Using hooks we're creating local state
     const [state, setState] = useState({
@@ -35,5 +36,3 @@ function Technologies(props) {
         </div>
     );
 };
-
-export default Technologies;

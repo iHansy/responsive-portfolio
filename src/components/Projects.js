@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Projects.css';
 
-function Projects(props) {
+export default function Projects(props) {
 
     // Using hooks we're creating local state
     const [state, setState] = useState('Starter state');
@@ -12,5 +12,3 @@ function Projects(props) {
        </div>
     );
 };
-
-export default Projects;
