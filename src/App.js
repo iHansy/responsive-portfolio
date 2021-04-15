@@ -1,5 +1,4 @@
 import './App.css';
-import { Router } from 'react-router-dom'
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import Header from './components/Header.js';
 import AboutMe from './components/AboutMe.js';
@@ -44,7 +43,6 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <Router>
       <ThemeProvider theme={theme}>
         <div className="app">
           <Header />
@@ -55,7 +53,6 @@ function App() {
           <Footer />
         </div>
       </ThemeProvider>
-    </Router>
   );
 }
 
