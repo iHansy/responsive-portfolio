@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import './Technologies.css';
-import { makeStyles, Grid, Card, CardContent, Typography } from '@material-ui/core';
+import { makeStyles, Grid, Card, CardContent, Typography, Paper } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1
+        flexGrow: 1,
     },
-    card: {
-        height: 150,
-        width: 175,
-        margin: 'auto'
-    }
 }));
 
 export default function Technologies(props) {
@@ -32,21 +27,41 @@ export default function Technologies(props) {
             '/images/postgresql.png',
             '/images/heroku.png',
             '/images/github.png'
+        ],
+        iconNames: [
+            'CSS3',
+            'HTML',
+            'Java',
+            'Python',
+            'Javascript',
+            'React',
+            'Vue',
+            'Material UI',
+            'Node.js',
+            'npm',
+            'postgreSQL',
+            'Heroku',
+            'Github',
         ]
     });
 
     return (
         <div className="technologies-container" id="Technologies">
-            <Typography variant="h3">Technologies go here</Typography>
-            <Grid container className={classes.root}>
+            <Typography variant="h3">My Tech Stack</Typography>
+            <Grid container className={classes.root} alignItems="center">
                 <Grid item xs={12}>
                     <Grid container justify="center" spacing={spacing}>
                         {state.iconImages.map((icon, i) => (
                             <Grid item key={icon}>
-                                    <img src={icon} alt={icon} />
-                                    <Typography>
-                                        {icon}
-                                    </Typography>
+                                <img src={icon} alt={icon} />
+                                {state.iconNames.map((name, i) => {
+                                    return (
+                                        <Typography key={i}>
+                                            {name}testing
+                                        </Typography>
+
+                                    )
+                                })}
                             </Grid>
                         ))}
                     </Grid>
