@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Technologies.css';
-import { makeStyles, Grid, Card, CardContent, Typography, Paper, Box } from '@material-ui/core';
+import { makeStyles, Grid, Card, CardContent, Typography, Paper, Box, Button } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -14,20 +14,20 @@ export default function Technologies(props) {
     const classes = useStyles();
     const [spacing, setSpacing] = useState(6);
     const [state, setState] = useState({
-        technologyUrl: [
-            '/images/CSS.png',
-            '/images/HTML.png',
-            '/images/Java.png',
-            '/images/Python.png',
-            '/images/JavaScript.png',
-            '/images/React.js.png',
-            '/images/Vue.js.png',
-            '/images/MUI.png',
-            '/images/Node.js.png',
-            '/images/NPM.png',
-            '/images/postgreSQL.png',
-            '/images/Heroku.png',
-            '/images/Github.png'
+        technologies: [
+            '/images/css.png',
+            '/images/html.png',
+            '/images/java.png',
+            '/images/python.png',
+            '/images/javascript.png',
+            '/images/react.png',
+            '/images/vue.png',
+            '/images/mui.png',
+            '/images/node.png',
+            '/images/npm.png',
+            '/images/postgresql.png',
+            '/images/heroku.png',
+            '/images/github.png'
         ]
     });
 
@@ -37,16 +37,13 @@ export default function Technologies(props) {
             <Grid container className={classes.root} alignItems="center">
                 <Grid item xs={12}>
                     <Grid container justify="center" spacing={spacing}>
-                        {state.technologyUrl.map((url, i) => {
-                            const technologyName = url.split('/')[2].split('.png')[0]
+                        {state.technologies.map((techItem, i) => {
+                            // was using this at first, but images weren't appearing in production. Very cool learning the
+                            // Built in split method though.
+                            // const technologyName = techItem.split('/')[2].split('.png')[0]
                             return (
                                 <Grid item key={i}>
-                                    <img src={url} alt={technologyName} />
-                                    <Box sx={{ fontWeight: 'bold' }}>
-                                        <Typography variant="h5">
-                                            {technologyName}
-                                        </Typography>
-                                    </Box>
+                                    <img src={techItem} alt={techItem} />
                                 </Grid>
                             )
                         })}
