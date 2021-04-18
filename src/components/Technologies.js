@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Technologies.css';
-import { makeStyles, Grid, Card, CardContent, Typography, Paper } from '@material-ui/core';
+import { makeStyles, Grid, Card, CardContent, Typography, Paper, Box } from '@material-ui/core';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -41,12 +42,12 @@ export default function Technologies(props) {
                             return (
                                 <Grid item key={i}>
                                     <img src={url} alt={technologyName} />
-                                    <Typography>
-                                        {technologyName}
-                                    </Typography>
-
+                                    <Box sx={{ fontWeight: 'bold' }}>
+                                        <Typography variant="h5">
+                                            {technologyName}
+                                        </Typography>
+                                    </Box>
                                 </Grid>
-
                             )
                         })}
                     </Grid>
