@@ -31,8 +31,6 @@ export default function Technologies(props) {
         ]
     });
 
-    const test = function 
-
     return (
         <div className="technologies-container" id="Technologies">
             <Typography variant="h3">My Tech Stack</Typography>
