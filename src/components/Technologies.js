@@ -15,19 +15,21 @@ export default function Technologies(props) {
     const [spacing, setSpacing] = useState(6);
     const [state, setState] = useState({
         technologies: [
-            '/images/css.png',
-            '/images/html.png',
-            '/images/java.png',
-            '/images/python.png',
-            '/images/javascript.png',
-            '/images/react.png',
-            '/images/vue.png',
-            '/images/mui.png',
-            '/images/node.png',
-            '/images/npm.png',
-            '/images/postgresql.png',
-            '/images/heroku.png',
-            '/images/github.png'
+            { url: '/images/javascript.png', name: 'JavaScript' },
+            { url: '/images/react.png', name: 'React.js' },
+            { url: '/images/vue.png', name: 'Vue.js' },
+            { url: '/images/node.png', name: 'Node.js' },
+            { url: '/images/java.png', name: 'Java' },
+            { url: '/images/python.png', name: 'Python' },
+            { url: '/images/postgresql.png', name: 'postgreSQL' },
+            { url: '/images/html.png', name: 'HTML5' },
+            { url: '/images/css.png', name: 'CSS3' },
+            { url: '/images/sass.png', name: 'SASS' },
+            { url: '/images/mui.png', name: 'Material UI' },
+            { url: '/images/npm.png', name: 'NPM' },
+            { url: '/images/git.png', name: 'Git' },
+            { url: '/images/github.png', name: 'Github' },
+            { url: '/images/heroku.png', name: 'Heroku' }
         ]
     });
 
@@ -43,7 +45,8 @@ export default function Technologies(props) {
                             // const technologyName = techItem.split('/')[2].split('.png')[0]
                             return (
                                 <Grid item key={i}>
-                                    <img src={techItem} alt={techItem} />
+                                    <img height="144" width="144" src={techItem.url} alt={techItem.name} />
+                                    <Typography variant="h5"> {techItem.name} </Typography>
                                 </Grid>
                             )
                         })}
