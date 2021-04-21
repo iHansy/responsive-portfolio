@@ -6,13 +6,36 @@ import { makeStyles, Grid, Card, CardContent, Typography, Paper, Box, Button } f
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        justifyItems: 'end'
     },
+    techImg: {
+        [theme.breakpoints.up('xs')]: {
+            width: '80px',
+            height: '80px'
+        },
+        [theme.breakpoints.up('sm')]: {
+            width: '110px',
+            height: '110px'
+        },
+        [theme.breakpoints.up('md')]: {
+            width: '150px',
+            height: '150px'
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: '180px',
+            height: '180px'
+        },
+    },
+    techGridItem: {
+        marginBottom: '2rem'
+    }
 }));
 
 export default function Technologies(props) {
 
     const classes = useStyles();
-    const [spacing, setSpacing] = useState(6);
+    // not using spacing, messes with grid items being centered
+    // const [spacing, setSpacing] = useState(0);
     const [state, setState] = useState({
         technologies: [
             { url: '/images/javascript.png', name: 'JavaScript' },
@@ -35,24 +58,24 @@ export default function Technologies(props) {
 
     return (
         <div className="technologies-container" id="Technologies">
-            <Typography variant="h3">My Tech Stack</Typography>
-            <Grid container className={classes.root} alignItems="center">
-                <Grid item xs={12}>
-                    <Grid container justify="center" spacing={spacing}>
-                        {state.technologies.map((techItem, i) => {
-                            // was using this at first, but images weren't appearing in production. Very cool learning the
-                            // Built in split method though.
-                            // const technologyName = techItem.split('/')[2].split('.png')[0]
-                            return (
-                                <Grid item key={i}>
-                                    <img height="144" width="144" src={techItem.url} alt={techItem.name} />
-                                    <Typography variant="h5"> {techItem.name} </Typography>
-                                </Grid>
-                            )
-                        })}
-                    </Grid>
+            <Box my={6}>
+                <Typography variant="h3" mb={10}>My Tech Stack</Typography>
+            </Box>
+            <Box>
+                <Grid container className={classes.root} xs={12}>
+                    {state.technologies.map((techItem, i) => {
+                        // was using this at first, but images weren't appearing in production. Very cool learning the
+                        // Built in split method though.
+                        // const technologyName = techItem.split('/')[2].split('.png')[0]
+                        return (
+                            <Grid item key={i} xs={6} sm={4} md={3} lg={3} className={classes.techGridItem}>
+                                <img className={classes.techImg} src={techItem.url} alt={techItem.name} />
+                                <Typography variant="h5"> {techItem.name} </Typography>
+                            </Grid>
+                        )
+                    })}
                 </Grid>
-            </Grid>
+            </Box>
         </div>
     );
 };
