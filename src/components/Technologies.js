@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Technologies.css';
 import { makeStyles, Grid, Card, CardContent, Typography, Paper, Box, Button } from '@material-ui/core';
+import { border } from '@material-ui/system';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -28,6 +29,35 @@ const useStyles = makeStyles((theme) => ({
     },
     techGridItem: {
         marginBottom: '2rem'
+    },
+    techSkillSet: {
+        height: '15px',
+        width: '15px',
+        backgroundColor: 'rgb(56, 255, 56)',
+        borderRadius: '50%',
+        display: 'inline-block',
+        border: '2px solid black'
+    },
+    SSParent: {
+        display: 'flex',
+        justifyContent: 'space-evenly'
+    },
+    SSContainer: {
+        width: '60%',
+        margin: 'auto',
+        marginTop: '10px',
+        [theme.breakpoints.up('xs')]: {
+            width: '65%',
+        },
+        [theme.breakpoints.up('sm')]: {
+            width: '55%',
+        },
+        [theme.breakpoints.up('md')]: {
+            width: '60%',
+        },
+        [theme.breakpoints.up('md')]: {
+            width: '45',
+        }
     }
 }));
 
@@ -59,18 +89,27 @@ export default function Technologies(props) {
     return (
         <div className="technologies-container" id="Technologies">
             <Box my={6}>
-                <Typography variant="h3" mb={10}>My Tech Stack</Typography>
+                <Typography variant="h3" mb={10}>Tech I'm Familiar With</Typography>
             </Box>
             <Box>
                 <Grid container className={classes.root} xs={12}>
                     {state.technologies.map((techItem, i) => {
                         // was using this at first, but images weren't appearing in production. Very cool learning the
-                        // Built in split method though.
+                        // Built in split function though.
                         // const technologyName = techItem.split('/')[2].split('.png')[0]
                         return (
                             <Grid item key={i} xs={6} sm={4} md={3} lg={3} className={classes.techGridItem}>
                                 <img className={classes.techImg} src={techItem.url} alt={techItem.name} />
                                 <Typography variant="h5"> {techItem.name} </Typography>
+                                <div className={classes.SSContainer}>
+                                    <div className={classes.SSParent}>
+                                        <span className={classes.techSkillSet}></span>
+                                        <span className={classes.techSkillSet}></span>
+                                        <span className={classes.techSkillSet}></span>
+                                        <span className={classes.techSkillSet}></span>
+                                        <span className={classes.techSkillSet}></span>
+                                    </div>
+                                </div>
                             </Grid>
                         )
                     })}
