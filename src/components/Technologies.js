@@ -30,10 +30,42 @@ const useStyles = makeStyles((theme) => ({
     techGridItem: {
         marginBottom: '2rem'
     },
-    techSkillSet: {
+    techSkillLevel1: {
         height: '15px',
         width: '15px',
-        backgroundColor: 'rgb(56, 255, 56)',
+        backgroundColor: 'red',
+        borderRadius: '50%',
+        display: 'inline-block',
+        border: '2px solid black'
+    },
+    techSkillLevel2: {
+        height: '15px',
+        width: '15px',
+        backgroundColor: 'red',
+        borderRadius: '50%',
+        display: 'inline-block',
+        border: '2px solid black'
+    },
+    techSkillLevel3: {
+        height: '15px',
+        width: '15px',
+        backgroundColor: 'red',
+        borderRadius: '50%',
+        display: 'inline-block',
+        border: '2px solid black'
+    },
+    techSkillLevel4: {
+        height: '15px',
+        width: '15px',
+        backgroundColor: 'red',
+        borderRadius: '50%',
+        display: 'inline-block',
+        border: '2px solid black'
+    },
+    techSkillLevel5: {
+        height: '15px',
+        width: '15px',
+        backgroundColor: 'red',
         borderRadius: '50%',
         display: 'inline-block',
         border: '2px solid black'
@@ -68,21 +100,21 @@ export default function Technologies(props) {
     // const [spacing, setSpacing] = useState(0);
     const [state, setState] = useState({
         technologies: [
-            { url: '/images/javascript.png', name: 'JavaScript' },
-            { url: '/images/react.png', name: 'React.js' },
-            { url: '/images/vue.png', name: 'Vue.js' },
-            { url: '/images/node.png', name: 'Node.js' },
-            { url: '/images/java.png', name: 'Java' },
-            { url: '/images/python.png', name: 'Python' },
-            { url: '/images/postgresql.png', name: 'postgreSQL' },
-            { url: '/images/html.png', name: 'HTML5' },
-            { url: '/images/css.png', name: 'CSS3' },
-            { url: '/images/sass.png', name: 'SASS' },
-            { url: '/images/mui.png', name: 'Material UI' },
-            { url: '/images/npm.png', name: 'NPM' },
-            { url: '/images/git.png', name: 'Git' },
-            { url: '/images/github.png', name: 'Github' },
-            { url: '/images/heroku.png', name: 'Heroku' }
+            { url: '/images/javascript.png', name: 'JavaScript', skillLevel: 5},
+            { url: '/images/react.png', name: 'React.js', skillLevel: 5},
+            { url: '/images/vue.png', name: 'Vue.js', skillLevel: 5},
+            { url: '/images/node.png', name: 'Node.js', skillLevel: 3},
+            { url: '/images/java.png', name: 'Java', skillLevel: 2},
+            { url: '/images/python.png', name: 'Python', skillLevel: 1},
+            { url: '/images/postgresql.png', name: 'postgreSQL', skillLevel: 4},
+            { url: '/images/html.png', name: 'HTML5', skillLevel: 5},
+            { url: '/images/css.png', name: 'CSS3', skillLevel: 5},
+            { url: '/images/sass.png', name: 'SASS', skillLevel: 4},
+            { url: '/images/mui.png', name: 'Material UI', skillLevel: 4},
+            { url: '/images/npm.png', name: 'NPM', skillLevel: 3},
+            { url: '/images/git.png', name: 'Git', skillLevel: 4},
+            { url: '/images/github.png', name: 'Github', skillLevel: 4},
+            { url: '/images/heroku.png', name: 'Heroku', skillLevel: 2}
         ]
     });
 
@@ -103,11 +135,11 @@ export default function Technologies(props) {
                                 <Typography variant="h5"> {techItem.name} </Typography>
                                 <div className={classes.SSContainer}>
                                     <div className={classes.SSParent}>
-                                        <span className={classes.techSkillSet}></span>
-                                        <span className={classes.techSkillSet}></span>
-                                        <span className={classes.techSkillSet}></span>
-                                        <span className={classes.techSkillSet}></span>
-                                        <span className={classes.techSkillSet}></span>
+                                        <span className={classes.techSkillLevel1}></span>
+                                        <span className={classes.techSkillLevel1}></span>
+                                        <span className={classes.techSkillLevel1}></span>
+                                        <span className={classes.techSkillLevel1}></span>
+                                        <span className={classes.techSkillLevel1}></span>
                                     </div>
                                 </div>
                             </Grid>
