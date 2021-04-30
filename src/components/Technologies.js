@@ -30,42 +30,49 @@ const useStyles = makeStyles((theme) => ({
     techGridItem: {
         marginBottom: '2rem'
     },
-    techSkillLevel1: {
+    techSkill1: {
         height: '15px',
         width: '15px',
-        backgroundColor: 'red',
+        backgroundColor: '#ff0000',
         borderRadius: '50%',
         display: 'inline-block',
         border: '2px solid black'
     },
-    techSkillLevel2: {
+    techSkill2: {
         height: '15px',
         width: '15px',
-        backgroundColor: 'red',
+        backgroundColor: '#f66d00',
         borderRadius: '50%',
         display: 'inline-block',
         border: '2px solid black'
     },
-    techSkillLevel3: {
+    techSkill3: {
         height: '15px',
         width: '15px',
-        backgroundColor: 'red',
+        backgroundColor: '#d7a700',
         borderRadius: '50%',
         display: 'inline-block',
         border: '2px solid black'
     },
-    techSkillLevel4: {
+    techSkill4: {
         height: '15px',
         width: '15px',
-        backgroundColor: 'red',
+        backgroundColor: '#a0d600',
         borderRadius: '50%',
         display: 'inline-block',
         border: '2px solid black'
     },
-    techSkillLevel5: {
+    techSkill5: {
         height: '15px',
         width: '15px',
-        backgroundColor: 'red',
+        backgroundColor: '#00ff00',
+        borderRadius: '50%',
+        display: 'inline-block',
+        border: '2px solid black'
+    },
+    techSkillNull: {
+        height: '15px',
+        width: '15px',
         borderRadius: '50%',
         display: 'inline-block',
         border: '2px solid black'
@@ -114,7 +121,7 @@ export default function Technologies(props) {
             { url: '/images/npm.png', name: 'NPM', skillLevel: 3},
             { url: '/images/git.png', name: 'Git', skillLevel: 4},
             { url: '/images/github.png', name: 'Github', skillLevel: 4},
-            { url: '/images/heroku.png', name: 'Heroku', skillLevel: 2}
+            { url: '/images/heroku.png', name: 'Heroku', skillLevel: 3}
         ]
     });
 
@@ -135,11 +142,11 @@ export default function Technologies(props) {
                                 <Typography variant="h5"> {techItem.name} </Typography>
                                 <div className={classes.SSContainer}>
                                     <div className={classes.SSParent}>
-                                        <span className={classes.techSkillLevel1}></span>
-                                        <span className={classes.techSkillLevel1}></span>
-                                        <span className={classes.techSkillLevel1}></span>
-                                        <span className={classes.techSkillLevel1}></span>
-                                        <span className={classes.techSkillLevel1}></span>
+                                        <span className={techItem.skillLevel === 1 ? classes.techSkill1 : techItem.skillLevel === 2 ? classes.techSkill2 : techItem.skillLevel === 3 ? classes.techSkill3 : techItem.skillLevel === 4 ? classes.techSkill4 : techItem.skillLevel === 5 ? classes.techSkill5 : null}></span>
+                                        <span className={techItem.skillLevel === 2 ? classes.techSkill2 : techItem.skillLevel === 3 ? classes.techSkill3 : techItem.skillLevel === 4 ? classes.techSkill4 : techItem.skillLevel === 5 ? classes.techSkill5 : classes.techSkillNull}></span>
+                                        <span className={techItem.skillLevel === 3 ? classes.techSkill3 : techItem.skillLevel === 4 ? classes.techSkill4 : techItem.skillLevel === 5 ? classes.techSkill5 : classes.techSkillNull}></span>
+                                        <span className={techItem.skillLevel === 4 ? classes.techSkill4 : techItem.skillLevel === 5 ? classes.techSkill5 : classes.techSkillNull}></span>
+                                        <span className={techItem.skillLevel === 5 ? classes.techSkill5 : classes.techSkillNull}></span>
                                     </div>
                                 </div>
                             </Grid>
