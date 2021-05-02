@@ -1,9 +1,63 @@
 .technologies-container {
-    background-color: lightgrey;
+    background-color: rgb(242, 244, 255);
     min-height: 100vh;
-    width: 90%;
+    width: 100%;
     margin: auto;
     align-items: center;
     text-align: center;
     padding: 20px;
+}
+
+#curly-brace {
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  top: 20px;
+  transform: rotate(90deg);
+  color:rgb(255, 174, 0)
+}
+
+.brace {
+  border-bottom: 5px solid;
+  margin: 0 10%;
+  width: 30%;
+  height: 20px;  
+  float: left;
+}
+
+.brace:before, .brace:after {
+  content: "";
+  width: 10%;
+  height: 45px;
+  position: absolute;
+  display: block;
+}
+
+#left:before {  
+  border-bottom: 5px solid;  
+  border-bottom-left-radius: 20px;
+  margin-left: -10%;
+  margin-top: -30px;
+}
+
+#left:after {
+  border-top: 5px solid;
+  border-top-right-radius: 20px;
+  margin-left: 30%;
+  margin-top: 15px;    
+}
+
+#right:before {
+  border-top: 5px solid;
+  border-top-left-radius: 20px;
+  margin-left: -10%;
+  margin-top: 15px;
+}
+
+#right:after {
+  border-bottom: 5px solid;
+  border-bottom-right-radius: 20px;
+  margin-left: 30%;
+  margin-top: -30px;
 }

@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     techSkill2: {
         height: '15px',
         width: '15px',
-        backgroundColor: '#f66d00',
+        backgroundColor: '#ff7504',
         borderRadius: '50%',
         display: 'inline-block',
         border: '2px solid black'
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     techSkill3: {
         height: '15px',
         width: '15px',
-        backgroundColor: '#d7a700',
+        backgroundColor: '#ffc400',
         borderRadius: '50%',
         display: 'inline-block',
         border: '2px solid black'
@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     techSkill4: {
         height: '15px',
         width: '15px',
-        backgroundColor: '#a0d600',
+        backgroundColor: '#d9ff00',
         borderRadius: '50%',
         display: 'inline-block',
         border: '2px solid black'
@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'inline-block',
         border: '2px solid black'
     },
-    techSkillNull: {
+    techSkillEmpty: {
         height: '15px',
         width: '15px',
         borderRadius: '50%',
@@ -107,28 +107,36 @@ export default function Technologies(props) {
     // const [spacing, setSpacing] = useState(0);
     const [state, setState] = useState({
         technologies: [
-            { url: '/images/javascript.png', name: 'JavaScript', skillLevel: 5},
-            { url: '/images/react.png', name: 'React.js', skillLevel: 5},
-            { url: '/images/vue.png', name: 'Vue.js', skillLevel: 5},
-            { url: '/images/node.png', name: 'Node.js', skillLevel: 3},
-            { url: '/images/java.png', name: 'Java', skillLevel: 2},
-            { url: '/images/python.png', name: 'Python', skillLevel: 1},
-            { url: '/images/postgresql.png', name: 'postgreSQL', skillLevel: 4},
-            { url: '/images/html.png', name: 'HTML5', skillLevel: 5},
-            { url: '/images/css.png', name: 'CSS3', skillLevel: 5},
-            { url: '/images/sass.png', name: 'SASS', skillLevel: 4},
-            { url: '/images/mui.png', name: 'Material UI', skillLevel: 4},
-            { url: '/images/npm.png', name: 'NPM', skillLevel: 3},
-            { url: '/images/git.png', name: 'Git', skillLevel: 4},
-            { url: '/images/github.png', name: 'Github', skillLevel: 4},
-            { url: '/images/heroku.png', name: 'Heroku', skillLevel: 3}
+            { url: '/images/javascript.png', name: 'JavaScript', skillLevel: 5 },
+            { url: '/images/react.png', name: 'React.js', skillLevel: 5 },
+            { url: '/images/vue.png', name: 'Vue.js', skillLevel: 5 },
+            { url: '/images/node.png', name: 'Node.js', skillLevel: 3 },
+            { url: '/images/java.png', name: 'Java', skillLevel: 2 },
+            { url: '/images/python.png', name: 'Python', skillLevel: 1 },
+            { url: '/images/postgresql.png', name: 'postgreSQL', skillLevel: 4 },
+            { url: '/images/html.png', name: 'HTML5', skillLevel: 5 },
+            { url: '/images/css.png', name: 'CSS3', skillLevel: 5 },
+            { url: '/images/sass.png', name: 'SASS', skillLevel: 4 },
+            { url: '/images/mui.png', name: 'Material UI', skillLevel: 4 },
+            { url: '/images/npm.png', name: 'NPM', skillLevel: 3 },
+            { url: '/images/git.png', name: 'Git', skillLevel: 4 },
+            { url: '/images/github.png', name: 'Github', skillLevel: 4 },
+            { url: '/images/heroku.png', name: 'Heroku', skillLevel: 3 }
         ]
     });
 
     return (
         <div className="technologies-container" id="Technologies">
             <Box my={6}>
-                <Typography variant="h3" mb={10}>Tech I'm Familiar With</Typography>
+                <Typography variant="h3" mb={10}>
+                <span style={{ position: 'relative' }}>
+                    <div id="curly-brace">
+                        <div id="left" class="brace"></div>
+                        <div id="right" class="brace"></div>
+                    </div>
+                </span>
+                    Technology Stack
+                </Typography>
             </Box>
             <Box>
                 <Grid container className={classes.root} xs={12}>
@@ -143,10 +151,10 @@ export default function Technologies(props) {
                                 <div className={classes.SSContainer}>
                                     <div className={classes.SSParent}>
                                         <span className={techItem.skillLevel === 1 ? classes.techSkill1 : techItem.skillLevel === 2 ? classes.techSkill2 : techItem.skillLevel === 3 ? classes.techSkill3 : techItem.skillLevel === 4 ? classes.techSkill4 : techItem.skillLevel === 5 ? classes.techSkill5 : null}></span>
-                                        <span className={techItem.skillLevel === 2 ? classes.techSkill2 : techItem.skillLevel === 3 ? classes.techSkill3 : techItem.skillLevel === 4 ? classes.techSkill4 : techItem.skillLevel === 5 ? classes.techSkill5 : classes.techSkillNull}></span>
-                                        <span className={techItem.skillLevel === 3 ? classes.techSkill3 : techItem.skillLevel === 4 ? classes.techSkill4 : techItem.skillLevel === 5 ? classes.techSkill5 : classes.techSkillNull}></span>
-                                        <span className={techItem.skillLevel === 4 ? classes.techSkill4 : techItem.skillLevel === 5 ? classes.techSkill5 : classes.techSkillNull}></span>
-                                        <span className={techItem.skillLevel === 5 ? classes.techSkill5 : classes.techSkillNull}></span>
+                                        <span className={techItem.skillLevel === 2 ? classes.techSkill2 : techItem.skillLevel === 3 ? classes.techSkill3 : techItem.skillLevel === 4 ? classes.techSkill4 : techItem.skillLevel === 5 ? classes.techSkill5 : classes.techSkillEmpty}></span>
+                                        <span className={techItem.skillLevel === 3 ? classes.techSkill3 : techItem.skillLevel === 4 ? classes.techSkill4 : techItem.skillLevel === 5 ? classes.techSkill5 : classes.techSkillEmpty}></span>
+                                        <span className={techItem.skillLevel === 4 ? classes.techSkill4 : techItem.skillLevel === 5 ? classes.techSkill5 : classes.techSkillEmpty}></span>
+                                        <span className={techItem.skillLevel === 5 ? classes.techSkill5 : classes.techSkillEmpty}></span>
                                     </div>
                                 </div>
                             </Grid>
