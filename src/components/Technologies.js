@@ -141,7 +141,8 @@ export default function Technologies(props) {
 
     return (
         <div className="technologies-container" id="Technologies">
-            <Box my={4}>
+            <Box>
+                <div class="top-border"></div>
                 <h1 className={classes.titleText} class="divider" mb={10}>
                     <span></span>
                     <span class="text-span">
