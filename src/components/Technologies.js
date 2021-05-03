@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Technologies.css';
 import { makeStyles, Grid, Card, CardContent, Typography, Paper, Box, Button } from '@material-ui/core';
 import { border } from '@material-ui/system';
@@ -124,30 +124,41 @@ export default function Technologies(props) {
             { url: '/images/heroku.png', name: 'Heroku', skillLevel: 3 }
         ]
     });
+    let [windowWidth, setWindowWidth] = useState (window.innerWidth);
+
+    useEffect(function() {
+        updateWindowWidth();
+        window.addEventListener("resize", updateWindowWidth);
+        
+        return function cleanup() {
+          window.removeEventListener("resize", updateWindowWidth);
+        }
+      }, []);
+
+      function updateWindowWidth() {
+        setWindowWidth(window.innerWidth);
+     }
 
     return (
         <div className="technologies-container" id="Technologies">
-            <Box my={6}>
-                <Typography variant="h3" mb={10}>
-                <span style={{ position: 'relative' }}>
-                    <div id="curly-brace">
-                        <div id="left" class="brace"></div>
-                        <div id="right" class="brace"></div>
-                    </div>
-                </span>
-                    Technology Stack
-                </Typography>
+            <Box my={4}>
+                <h1 className={classes.titleText} class="divider" mb={10}>
+                    <span></span>
+                    <span class="text-span">
+                        <div class="bracket">&#123;</div>
+                        {windowWidth <= 850 ? `Tech Stack` : `Technology Stack`}
+                        <div class="bracket">&#125;</div>
+                    </span>
+                    <span></span>
+                </h1>
             </Box>
             <Box>
                 <Grid container className={classes.root} xs={12}>
                     {state.technologies.map((techItem, i) => {
-                        // was using this at first, but images weren't appearing in production. Very cool learning the
-                        // Built in split function though.
-                        // const technologyName = techItem.split('/')[2].split('.png')[0]
                         return (
                             <Grid item key={i} xs={6} sm={4} md={3} lg={3} className={classes.techGridItem}>
                                 <img className={classes.techImg} src={techItem.url} alt={techItem.name} />
-                                <Typography variant="h5"> {techItem.name} </Typography>
+                                <h2 class="tech-item-text"> {techItem.name} </h2>
                                 <div className={classes.SSContainer}>
                                     <div className={classes.SSParent}>
                                         <span className={techItem.skillLevel === 1 ? classes.techSkill1 : techItem.skillLevel === 2 ? classes.techSkill2 : techItem.skillLevel === 3 ? classes.techSkill3 : techItem.skillLevel === 4 ? classes.techSkill4 : techItem.skillLevel === 5 ? classes.techSkill5 : null}></span>
