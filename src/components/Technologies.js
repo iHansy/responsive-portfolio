@@ -173,6 +173,7 @@ export default function Technologies(props) {
                         )
                     })}
                 </Grid>
+                <div class="bottom-border"></div>
             </Box>
         </div>
     );
