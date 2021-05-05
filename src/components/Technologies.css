@@ -1,5 +1,5 @@
 .technologies-container {
-    background-color: rgb(189, 189, 189);
+    background-color: rgb(189, 189, 189)!important;
     min-height: 100vh;
     width: 100%;
     margin: auto;
@@ -67,6 +67,8 @@
   text-align: center; 
   width: 75%;
   margin: auto;
+  padding-top: 50px;
+  padding-bottom: 10px;
 }
 .divider span { 
   display: table-cell; 
@@ -140,14 +142,14 @@
 }
 
 .top-border {
-  height: 50px;
+  height: 15px;
   background-color: rgb(189, 189, 189); /* For browsers that do not support gradients */
-  background-image: linear-gradient(white, rgb(189, 189, 189));
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(189, 189, 189));
   width: 100%;
 }
 
 .bottom-border {
-  height: 50px;
+  height: 15px;
   background-color: rgb(189, 189, 189); /* For browsers that do not support gradients */
   background-image: linear-gradient(rgb(189, 189, 189), white);
   width: 100%;

@@ -7,7 +7,8 @@ import { border } from '@material-ui/system';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        justifyItems: 'end'
+        justifyItems: 'end',
+        paddingBottom: '50px'
     },
     techImg: {
         [theme.breakpoints.up('xs')]: {
@@ -143,7 +144,7 @@ export default function Technologies(props) {
         <div className="technologies-container" id="Technologies">
             <Box>
                 <div class="top-border"></div>
-                <h1 className={classes.titleText} class="divider" mb={10}>
+                <h1 class="divider">
                     <span></span>
                     <span class="text-span">
                         <div class="bracket">&#123;</div>
