@@ -16,13 +16,13 @@ import CloseIcon from '@material-ui/icons/Close';
 //custom material ui styling
 const useStyles = makeStyles((theme) => ({
   list: {
-    width: 250,
+    width: '250px',
   },
   muiList: {
     padding: '0px',
   },
   fullList: {
-    width: 'auto',
+    width: '250px',
   },
   menuIcon: {
     height: '30px',
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuClose: {
     position: 'relative',
-    left: '240%',
+    left: '320%',
     color: 'black',
     height: '32px',
     width: '32px',
@@ -86,10 +86,6 @@ export default function Header(props) {
     }
     setState({ ...state, [anchor]: open });
   };
-
-  const closeDrawer = (e) => {
-    console.log('TESTING CLOSE');
-  }
 
   const list = (anchor) => (
     <div
