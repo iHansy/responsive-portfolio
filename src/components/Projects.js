@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { makeStyles, Grid, Box } from '@material-ui/core';
 import './Projects.css';
 
 export default function Projects(props) {
@@ -8,7 +9,17 @@ export default function Projects(props) {
 
     return (
        <div className="projects-container" id="Projects">
-           <h1>Projects go here</h1>
+            <Box>
+                <h1 class="divider">
+                    <span></span>
+                    <span class="text-span">
+                        <div class="bracket">&#123;</div>
+                        Projects
+                        <div class="bracket">&#125;</div>
+                    </span>
+                    <span></span>
+                </h1>
+            </Box>
        </div>
     );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Technologies.css';
-import { makeStyles, Grid, Card, CardContent, Typography, Paper, Box, Button } from '@material-ui/core';
+import { makeStyles, Grid, Box } from '@material-ui/core';
 import { border } from '@material-ui/system';
 
 
@@ -125,20 +125,20 @@ export default function Technologies(props) {
             { url: '/images/heroku.png', name: 'Heroku', skillLevel: 3 }
         ]
     });
-    let [windowWidth, setWindowWidth] = useState (window.innerWidth);
+    let [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-    useEffect(function() {
+    useEffect(function () {
         updateWindowWidth();
         window.addEventListener("resize", updateWindowWidth);
-        
-        return function cleanup() {
-          window.removeEventListener("resize", updateWindowWidth);
-        }
-      }, []);
 
-      function updateWindowWidth() {
+        return function cleanup() {
+            window.removeEventListener("resize", updateWindowWidth);
+        }
+    }, []);
+
+    function updateWindowWidth() {
         setWindowWidth(window.innerWidth);
-     }
+    }
 
     return (
         <div className="technologies-container" id="Technologies">
@@ -174,8 +174,8 @@ export default function Technologies(props) {
                         )
                     })}
                 </Grid>
-                <div class="bottom-border"></div>
             </Box>
+            <div class="bottom-border"></div>
         </div>
     );
 };
