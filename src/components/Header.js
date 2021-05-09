@@ -5,13 +5,16 @@ import {
   Button, SwipeableDrawer, List, ListItem,
   ListItemIcon, ListItemText, Divider
 } from '@material-ui/core';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles, Box } from '@material-ui/core';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import MailIcon from '@material-ui/icons/Mail';
 import StarsIcon from '@material-ui/icons/Stars';
 import ComputerIcon from '@material-ui/icons/Computer';
 import SimCardIcon from '@material-ui/icons/SimCard';
 import CloseIcon from '@material-ui/icons/Close';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import { width } from '@material-ui/system';
 
 //custom material ui styling
 const useStyles = makeStyles((theme) => ({
@@ -169,6 +172,12 @@ export default function Header(props) {
     <header className="header-container">
       <div className="header-name-container">
         <h1 className="header-name"><span className="first-letter-color">H</span>ans <span className="first-letter-color">A</span>ccola</h1>
+        <Box ml={2} pt={1}>
+          <a className="media-links" href="https://www.linkedin.com/in/hans-accola-80b48b1b4/" target="_blank"><LinkedInIcon style={{width: '36px', height: '36px'}}/></a>
+        </Box>
+        <Box ml={.5} pt={1}>
+          <a className="media-links" href="https://github.com/ihansy" target="_blank"><GitHubIcon style={{width: '30px', height: '30px'}} /></a>
+        </Box>
       </div>
       <nav className="header-nav-links-container">
         <ul className="header-nav-links">

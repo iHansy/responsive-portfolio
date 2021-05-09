@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Technologies.css';
 import { makeStyles, Grid, Box } from '@material-ui/core';
-import { border } from '@material-ui/system';
-
 
 const useStyles = makeStyles((theme) => ({
     root: {

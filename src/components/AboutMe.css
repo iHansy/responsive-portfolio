@@ -188,3 +188,7 @@
     margin-top: 3vh;
   }
 }
+
+.media-links, .media-links:visited, .media-links:active {
+  color: inherit;
+}
