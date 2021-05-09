@@ -21,7 +21,6 @@ export default function Contact(props) {
                     <span></span>
                 </h1>
             </Box>
-            <div class="bottom-border"></div>
         </div>
     );
 };
