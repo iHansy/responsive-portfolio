@@ -152,11 +152,11 @@ export default function Technologies(props) {
                     <span></span>
                 </h1>
             </Box>
-            <Box>
+            <Box px={5} py={2}>
                 <Grid container className={classes.root} xs={12}>
                     {state.technologies.map((techItem, i) => {
                         return (
-                            <Grid item key={i} xs={6} sm={4} md={3} lg={3} className={classes.techGridItem}>
+                            <Grid item key={i} xs={6} sm={4} md={3} className={classes.techGridItem}>
                                 <img className={classes.techImg} src={techItem.img} alt={techItem.name} />
                                 <h2 class="tech-item-text"> {techItem.name} </h2>
                                 <div className={classes.SSContainer}>

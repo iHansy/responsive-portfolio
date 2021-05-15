@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { makeStyles, Grid, Box } from '@material-ui/core';
+import { makeStyles, Grid, Box, Card } from '@material-ui/core';
 import './Projects.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -8,6 +8,12 @@ const useStyles = makeStyles((theme) => ({
         justifyItems: 'end',
         paddingBottom: '50px'
     },
+    projectCard: {
+        maxHeight: '500px',
+        maxWidth: '550px',
+        margin: 'auto',
+        display: 'flex'
+    }
 }))
 
 export default function Projects(props) {
@@ -17,17 +23,17 @@ export default function Projects(props) {
     // Using hooks we're creating local state
     const [state, setState] = useState({
         projects: [
-            {title: 'Portfolio', img: '', description: ''},
-            {title: 'Adventure Hub', img: '', description: ''},
-            {title: 'Friendly Wager', img: '', description: ''},
-            {title: 'Feedback Tracker', img: '', description: ''},
-            {title: 'Task Manager', img: '', description: ''},
-            {title: 'Simple Calculator', img: '', description: ''},
+            { name: 'Portfolio', description: '', url: '', img1: '/images/projects/portfolio-1.png' },
+            { name: 'Adventure Hub', description: '', url: '', img1: '/images/projects/adventure-hub-1.png' },
+            { name: 'Friendly Wager', description: '', url: '', img1: '/images/projects/friendly-wager-1.png' },
+            { name: 'Feedback Tracker', description: '', url: '', img1: '/images/projects/feedback-tracker-1.png' },
+            { name: 'Task Manager', description: '', url: '', img1: '/images/projects/task-manager.png' },
+            { name: 'Simple Calculator', description: '', url: '', img1: '/images/projects/simple-calculator.png' },
         ]
     });
 
     return (
-       <div className="projects-container" id="Projects">
+        <div className="projects-container" id="Projects">
             <Box>
                 <h1 class="divider">
                     <span></span>
@@ -39,11 +45,22 @@ export default function Projects(props) {
                     <span></span>
                 </h1>
             </Box>
-            <Box>
-                <Grid container className={classes.root} xs={12}>
-
+            <Box mx={5} py={5}>
+                <Grid container className={classes.root} xs={12} spacing={5}>
+                    {state.projects.map((projectItem, i) => {
+                        return (
+                            <Grid item key={i} xs={12} md={6} className={classes.gridItem} >
+                                <Card className={classes.projectCard} class="project-card">
+                                    <div class="project-img-div">
+                                        <img class="projects-img" src={projectItem.img1} alt={projectItem.name} />
+                                    </div>
+                                    <h3 class="projects-name">{projectItem.name}</h3>
+                                </Card>
+                            </Grid>
+                        )
+                    })}
                 </Grid>
             </Box>
-       </div>
+        </div>
     );
 };
