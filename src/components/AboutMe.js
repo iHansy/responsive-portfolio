@@ -12,7 +12,7 @@ export default function AboutMe(props) {
                 <img className="aboutme-img" src="/images/headshot-4.jpg" alt="Headshot of Hans Accola"></img>
             </div>
             <div className="aboutme-description">
-                <h1 className="aboutme-welcome">WELCOME!</h1>
+                <h1 className="aboutme-welcome">Welcome!</h1>
                 <p className="aboutme-p1">Hi there, I’m Hans Accola, a full-stack software developer. Nice to meet you! I’m originally from Norway but moved to Minnesota when I was a child and have lived here ever since. Here are a few of my favorite things to do outside of coding:</p>
                 <ul className="aboutme-list">
                     <li>Going on hikes with my amazing fiancé, Marie</li>

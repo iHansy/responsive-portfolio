@@ -37,6 +37,12 @@ const useStyles = makeStyles((theme) => ({
     color: 'black',
     height: '32px',
     width: '32px',
+  },
+  navIcons: {
+    '&:hover': {
+      color: theme.palette.primary.main,
+      cursor: 'pointer'
+    }
   }
 }));
 
@@ -168,16 +174,20 @@ export default function Header(props) {
     </div >
   );
 
+  function openLinkedin() {
+    window.open("https://www.linkedin.com/in/hans-accola-80b48b1b4/")
+  };
+
+  function openGithub() {
+    window.open("https://github.com/ihansy/")
+  };
+
   return (
     <header className="header-container">
       <div className="header-name-container">
-        <h1 className="header-name"><span className="first-letter-color">H</span>ans <span className="first-letter-color">A</span>ccola</h1>
-        <Box ml={2} pt={1}>
-          <a className="media-links" href="https://www.linkedin.com/in/hans-accola-80b48b1b4/" target="_blank"><LinkedInIcon style={{width: '36px', height: '36px'}}/></a>
-        </Box>
-        <Box ml={.5} pt={1}>
-          <a className="media-links" href="https://github.com/ihansy" target="_blank"><GitHubIcon style={{width: '30px', height: '30px'}} /></a>
-        </Box>
+        <h1 class="header-name"><span className="first-letter-color">H</span>ANS <span className="first-letter-color">A</span>CCOLA</h1>
+        <LinkedInIcon className={classes.navIcons} onClick={openLinkedin} style={{ width: '31px', height: '31px', marginLeft: '20px' }} />
+        <GitHubIcon className={classes.navIcons} onClick={openGithub} style={{ width: '25px', height: '25px', marginLeft: '10px' }} />
       </div>
       <nav className="header-nav-links-container">
         <ul className="header-nav-links">
