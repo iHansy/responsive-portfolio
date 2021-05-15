@@ -106,21 +106,21 @@ export default function Technologies(props) {
     // const [spacing, setSpacing] = useState(0);
     const [state, setState] = useState({
         technologies: [
-            { url: '/images/javascript.png', name: 'JavaScript', skillLevel: 5 },
-            { url: '/images/react.png', name: 'React.js', skillLevel: 5 },
-            { url: '/images/vue.png', name: 'Vue.js', skillLevel: 5 },
-            { url: '/images/node.png', name: 'Node.js', skillLevel: 3 },
-            { url: '/images/java.png', name: 'Java', skillLevel: 2 },
-            { url: '/images/python.png', name: 'Python', skillLevel: 1 },
-            { url: '/images/postgresql.png', name: 'postgreSQL', skillLevel: 4 },
-            { url: '/images/html.png', name: 'HTML5', skillLevel: 5 },
-            { url: '/images/css.png', name: 'CSS3', skillLevel: 5 },
-            { url: '/images/sass.png', name: 'SASS', skillLevel: 4 },
-            { url: '/images/mui.png', name: 'Material UI', skillLevel: 4 },
-            { url: '/images/npm.png', name: 'NPM', skillLevel: 3 },
-            { url: '/images/git.png', name: 'Git', skillLevel: 4 },
-            { url: '/images/github.png', name: 'Github', skillLevel: 4 },
-            { url: '/images/heroku.png', name: 'Heroku', skillLevel: 3 }
+            { img: '/images/technologies/javascript.png', name: 'JavaScript', skillLevel: 5 },
+            { img: '/images/technologies/react.png', name: 'React.js', skillLevel: 5 },
+            { img: '/images/technologies/vue.png', name: 'Vue.js', skillLevel: 5 },
+            { img: '/images/technologies/node.png', name: 'Node.js', skillLevel: 3 },
+            { img: '/images/technologies/java.png', name: 'Java', skillLevel: 2 },
+            { img: '/images/technologies/python.png', name: 'Python', skillLevel: 1 },
+            { img: '/images/technologies/postgresql.png', name: 'postgreSQL', skillLevel: 4 },
+            { img: '/images/technologies/html.png', name: 'HTML5', skillLevel: 5 },
+            { img: '/images/technologies/css.png', name: 'CSS3', skillLevel: 5 },
+            { img: '/images/technologies/sass.png', name: 'SASS', skillLevel: 4 },
+            { img: '/images/technologies/mui.png', name: 'Material UI', skillLevel: 4 },
+            { img: '/images/technologies/npm.png', name: 'NPM', skillLevel: 3 },
+            { img: '/images/technologies/git.png', name: 'Git', skillLevel: 4 },
+            { img: '/images/technologies/github.png', name: 'Github', skillLevel: 4 },
+            { img: '/images/technologies/heroku.png', name: 'Heroku', skillLevel: 3 }
         ]
     });
     let [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -157,7 +157,7 @@ export default function Technologies(props) {
                     {state.technologies.map((techItem, i) => {
                         return (
                             <Grid item key={i} xs={6} sm={4} md={3} lg={3} className={classes.techGridItem}>
-                                <img className={classes.techImg} src={techItem.url} alt={techItem.name} />
+                                <img className={classes.techImg} src={techItem.img} alt={techItem.name} />
                                 <h2 class="tech-item-text"> {techItem.name} </h2>
                                 <div className={classes.SSContainer}>
                                     <div className={classes.SSParent}>
