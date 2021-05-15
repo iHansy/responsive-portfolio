@@ -32,9 +32,9 @@ export default function Projects(props) {
                 <h1 class="divider">
                     <span></span>
                     <span class="text-span">
-                        <div class="bracket">&#123;</div>
+                        <div class="bracket left-bracket">&#123;</div>
                         Projects
-                        <div class="bracket">&#125;</div>
+                        <div class="bracket right-bracket">&#125;</div>
                     </span>
                     <span></span>
                 </h1>
