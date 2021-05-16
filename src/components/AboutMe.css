@@ -18,6 +18,10 @@
   display: flex;
 }
 
+.header-name:hover {
+  cursor: pointer;
+}
+
 .header-nav-links {
   justify-content: space-between;
   list-style: none;
@@ -142,6 +146,10 @@
   }
 }
 
+.nav-icons:visited, .nav-icons:active, .nav-icons:hover {
+  color: inherit;
+}
+
 @media screen and (min-width: 851px) {
   .header-nav-menu-container {
     display: none;
@@ -189,3 +197,4 @@
     margin-top: 3vh;
   }
 }
+

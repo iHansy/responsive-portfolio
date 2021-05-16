@@ -174,20 +174,26 @@ export default function Header(props) {
     </div >
   );
 
-  function openLinkedin() {
-    window.open("https://www.linkedin.com/in/hans-accola-80b48b1b4/")
-  };
-
-  function openGithub() {
-    window.open("https://github.com/ihansy/")
-  };
-
   return (
     <header className="header-container">
       <div className="header-name-container">
-        <h1 class="header-name"><span className="first-letter-color">H</span>ANS <span className="first-letter-color">A</span>CCOLA</h1>
-        <LinkedInIcon className={classes.navIcons} onClick={openLinkedin} style={{ width: '31px', height: '31px', marginLeft: '20px' }} />
-        <GitHubIcon className={classes.navIcons} onClick={openGithub} style={{ width: '25px', height: '25px', marginLeft: '10px' }} />
+        <Link
+          to="About-Me"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          onClick={toggleDrawer('right', false)}
+        >
+          <h1 class="header-name"><span className="first-letter-color">H</span>ANS <span className="first-letter-color">A</span>CCOLA</h1>
+        </Link>
+        <a class="nav-icons" style={{ height: '31px', width: '31px', marginLeft: '20px', }} href="https://www.linkedin.com/in/hans-accola-80b48b1b4/" target="_blank">
+          <LinkedInIcon className={classes.navIcons} style={{ width: '31px', height: '31px' }} />
+        </a>
+        <a class="nav-icons" style={{ height: '25px', width: '25px', marginLeft: '10px' }} href="https://www.github.com/ihansy/" target="_blank">
+          <GitHubIcon className={classes.navIcons} style={{ width: '25px', height: '25px' }} />
+        </a>
       </div>
       <nav className="header-nav-links-container">
         <ul className="header-nav-links">
