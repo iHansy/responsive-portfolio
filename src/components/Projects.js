@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { makeStyles, Grid, Box, Card, CardMedia } from '@material-ui/core';
+import { makeStyles, Grid, Box, Card, CardMedia, CardContent } from '@material-ui/core';
 import './Projects.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -8,16 +8,26 @@ const useStyles = makeStyles((theme) => ({
         justifyItems: 'end',
         paddingBottom: '50px'
     },
-    projectCard: {
-        maxHeight: '500px',
-        maxWidth: '550px',
+    projectBox: {
         margin: 'auto',
-        display: 'flex'
+        [theme.breakpoints.up('sm')]: {
+           marginLeft: '36px',
+           marginRight: '36px',
+        },
+        [theme.breakpoints.up('md')]: {
+            marginLeft: '48px',
+            marginRight: '48px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            marginLeft: '72px',
+            marginRight: '72px',
+        },
+    
     },
     media: {
         height: 0,
         paddingTop: '56.25%', // 16:9
-      },
+    }
 }))
 
 export default function Projects(props) {
@@ -49,26 +59,20 @@ export default function Projects(props) {
                     <span></span>
                 </h1>
             </Box>
-            <Box mx={10} py={5} display="flex" justifyContent="center">
+            <Box px={3} py={5} display="flex" justifyContent="center" className={classes.projectBox}>
                 <Grid container className={classes.root} xs={12} spacing={5}>
                     {state.projects.map((projectItem, i) => {
                         return (
-                            <Grid item key={i} xs={12} md={6} className={classes.gridItem} >
-                                <Card>
-                                    <div class="project-img-div">
-                                        {/* <img class="projects-img" src={projectItem.img1} alt={projectItem.name} /> */}
-                                        {/* <CardMedia
-                                            className={classes.media}
-                                            image="/static/images/cards/paella.jpg"
-                                            title="Paella dish"
-                                        /> */}
-                                        <CardMedia
-                                            className={classes.media}
-                                            image={projectItem.img1}
-                                            title={projectItem.name}
-                                        />
-                                    </div>
-                                    <h3 class="projects-name">{projectItem.name}</h3>
+                            <Grid item key={i} xs={12} md={6} >
+                                <Card elevation={5}>
+                                    <CardMedia
+                                        className={classes.media}
+                                        image={projectItem.img1}
+                                        title={projectItem.name}
+                                    />
+                                    <CardContent>
+                                        <h3 class="projects-name">{projectItem.name}</h3>
+                                    </CardContent>
                                 </Card>
                             </Grid>
                         )
