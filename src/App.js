@@ -25,6 +25,11 @@ const theme = createMuiTheme({
         fontFamily: 'Poppins',
       },
     },
+    MuiBackdrop: {
+      root: {
+        backgroundColor: 'rgba(0,0,0,0.7)'
+      }
+    }
   },
   palette: {
     primary: {
