@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { makeStyles, Grid, Box, Card, CardMedia, CardContent } from '@material-ui/core';
+import { makeStyles, Grid, Box, Card, CardMedia, CardContent, Slide, Dialog } from '@material-ui/core';
 import './Projects.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -11,8 +11,8 @@ const useStyles = makeStyles((theme) => ({
     projectBox: {
         margin: 'auto',
         [theme.breakpoints.up('sm')]: {
-           marginLeft: '36px',
-           marginRight: '36px',
+            marginLeft: '36px',
+            marginRight: '36px',
         },
         [theme.breakpoints.up('md')]: {
             marginLeft: '48px',
@@ -22,7 +22,13 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: '72px',
             marginRight: '72px',
         },
-    
+
+    },
+    projectCard: {
+        '&:hover': {
+            cursor: 'pointer',
+            boxShadow: '0px 10px 13px -6px rgb(0 0 0 / 30%), 0px 20px 31px 3px rgb(0 0 0 / 30%), 0px 8px 38px 7px rgb(0 0 0 / 30%)'
+        }
     },
     media: {
         height: 0,
@@ -30,12 +36,17 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+});
+
 export default function Projects(props) {
 
     const classes = useStyles();
 
     // Using hooks we're creating local state
     const [state, setState] = useState({
+        projectDialog: false,
         projects: [
             { name: 'Portfolio', description: '', url: '', img1: '/images/projects/portfolio-1.png' },
             { name: 'Adventure Hub', description: '', url: '', img1: '/images/projects/adventure-hub-1.png' },
@@ -45,6 +56,14 @@ export default function Projects(props) {
             { name: 'Simple Calculator', description: '', url: '', img1: '/images/projects/simple-calculator.png' },
         ]
     });
+
+    function openProjectDialog() {
+        setState({ ...state, projectDialog: true });
+    }
+
+    function closeProjectDialog() {
+        setState({ ...state, projectDialog: false });
+    }
 
     return (
         <div className="projects-container" id="Projects">
@@ -64,14 +83,14 @@ export default function Projects(props) {
                     {state.projects.map((projectItem, i) => {
                         return (
                             <Grid item key={i} xs={12} md={6} >
-                                <Card elevation={5}>
+                                <Card elevation={3} className={classes.projectCard} onClick={openProjectDialog}>
                                     <CardMedia
                                         className={classes.media}
                                         image={projectItem.img1}
                                         title={projectItem.name}
                                     />
                                     <CardContent>
-                                        <h3 class="projects-name">{projectItem.name}</h3>
+                                        <h3>{projectItem.name}</h3>
                                     </CardContent>
                                 </Card>
                             </Grid>
@@ -79,6 +98,16 @@ export default function Projects(props) {
                     })}
                 </Grid>
             </Box>
+            <Dialog
+                open={state.projectDialog}
+                TransitionComponent={Transition}
+                keepMounted
+                onClose={closeProjectDialog}
+            >
+                <div style={{ height: '200px', width: '200px' }}>
+                    <h1>TESTING DIALOGUE</h1>
+                </div>
+            </Dialog>
         </div>
     );
 };
