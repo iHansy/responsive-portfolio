@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { makeStyles, Grid, Box, Card } from '@material-ui/core';
+import { makeStyles, Grid, Box, Card, CardMedia } from '@material-ui/core';
 import './Projects.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -13,7 +13,11 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '550px',
         margin: 'auto',
         display: 'flex'
-    }
+    },
+    media: {
+        height: 0,
+        paddingTop: '56.25%', // 16:9
+      },
 }))
 
 export default function Projects(props) {
@@ -45,14 +49,24 @@ export default function Projects(props) {
                     <span></span>
                 </h1>
             </Box>
-            <Box mx={5} py={5}>
+            <Box mx={10} py={5} display="flex" justifyContent="center">
                 <Grid container className={classes.root} xs={12} spacing={5}>
                     {state.projects.map((projectItem, i) => {
                         return (
                             <Grid item key={i} xs={12} md={6} className={classes.gridItem} >
-                                <Card className={classes.projectCard} class="project-card">
+                                <Card>
                                     <div class="project-img-div">
-                                        <img class="projects-img" src={projectItem.img1} alt={projectItem.name} />
+                                        {/* <img class="projects-img" src={projectItem.img1} alt={projectItem.name} /> */}
+                                        {/* <CardMedia
+                                            className={classes.media}
+                                            image="/static/images/cards/paella.jpg"
+                                            title="Paella dish"
+                                        /> */}
+                                        <CardMedia
+                                            className={classes.media}
+                                            image={projectItem.img1}
+                                            title={projectItem.name}
+                                        />
                                     </div>
                                     <h3 class="projects-name">{projectItem.name}</h3>
                                 </Card>

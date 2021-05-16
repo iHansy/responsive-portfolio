@@ -75,7 +75,8 @@
 }
 
 .aboutme-list {
-  width: 90%;
+  width: 62%;
+  text-align: left;
 }
 
 .aboutme-welcome, .aboutme-p1, .aboutme-p2, .aboutme-list {

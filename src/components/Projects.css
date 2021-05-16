@@ -1,9 +1,10 @@
 .projects-container {
     min-height: 100vh;
     margin: auto;
-    align-items: center;
-    text-align: center;
+    align-items: center!important;
+    text-align: center!important;
     padding-top: 15px;
+    justify-content: center!important;
 }
 
 .projects-card {
