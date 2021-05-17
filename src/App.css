@@ -6,6 +6,11 @@
   text-align: center;
 }
 
+body {
+  overflow-y: visible!important;
+  padding: 0!important;
+}
+
 .app {
   font-family: 'Poppins', sans-serif;
 }
