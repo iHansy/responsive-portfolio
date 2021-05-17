@@ -42,17 +42,17 @@ const useStyles = makeStyles((theme) => ({
 
 const ColorButton = withStyles((theme) => ({
   root: {
-    color: theme.palette.textPrimary.main,
+    color: theme.textPrimary,
     '&:hover': {
-      backgroundColor: theme.palette.primary.main,
-      color: theme.palette.textPrimary.second,
+      backgroundColor: theme.primary,
+      color: theme.textSecondary
     },
   },
 }))(Button);
 
 const MenuButton = withStyles((theme) => ({
   root: {
-    color: theme.palette.textPrimary.main,
+    color: theme.textPrimary,
     '&:hover': {
       backgroundColor: 'transparent',
     },
@@ -61,10 +61,10 @@ const MenuButton = withStyles((theme) => ({
 
 const ColorListItem = withStyles((theme) => ({
   root: {
-    color: theme.palette.textPrimary.main,
+    color: theme.textPrimary,
     '&:hover': {
-      backgroundColor: theme.palette.primary.main,
-      color: theme.palette.textPrimary.second,
+      backgroundColor: theme.primary,
+      color: theme.textSecondary,
     },
     height: '65px',
   },

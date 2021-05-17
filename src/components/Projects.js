@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
     },
     projectCard: {
+        backgroundColor: theme.cardBackground,
         '&:hover': {
             cursor: 'pointer',
             boxShadow: '0px 10px 13px -6px rgb(0 0 0 / 30%), 0px 20px 31px 3px rgb(0 0 0 / 30%), 0px 8px 38px 7px rgb(0 0 0 / 30%)'
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     },
     media: {
         height: 0,
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '90.25%', // 16:9
     }
 }))
 
@@ -52,8 +53,8 @@ export default function Projects(props) {
             { name: 'Adventure Hub', description: '', url: '', img1: '/images/projects/adventure-hub-1.png' },
             { name: 'Friendly Wager', description: '', url: '', img1: '/images/projects/friendly-wager-1.png' },
             { name: 'Feedback Tracker', description: '', url: '', img1: '/images/projects/feedback-tracker-1.png' },
-            { name: 'Task Manager', description: '', url: '', img1: '/images/projects/task-manager.png' },
-            { name: 'Simple Calculator', description: '', url: '', img1: '/images/projects/simple-calculator.png' },
+            { name: 'Task Manager', description: '', url: '', img1: '/images/projects/task-manager-1.png' },
+            { name: 'Simple Calculator', description: '', url: '', img1: '/images/projects/simple-calculator-1.png' },
         ]
     });
 
@@ -85,7 +86,7 @@ export default function Projects(props) {
                             <Grid item key={i} xs={12} md={6} >
                                 <Card elevation={3} className={classes.projectCard} onClick={openProjectDialog}>
                                     <CardMedia
-                                        className={classes.media}
+                                        component="img"
                                         image={projectItem.img1}
                                         title={projectItem.name}
                                     />
