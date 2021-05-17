@@ -37,12 +37,6 @@ const useStyles = makeStyles((theme) => ({
     color: 'black',
     height: '32px',
     width: '32px',
-  },
-  navIcons: {
-    '&:hover': {
-      color: theme.palette.primary.main,
-      cursor: 'pointer'
-    }
   }
 }));
 
@@ -189,10 +183,10 @@ export default function Header(props) {
           <h1 class="header-name"><span className="first-letter-color">H</span>ANS <span className="first-letter-color">A</span>CCOLA</h1>
         </Link>
         <a class="nav-icons" style={{ height: '31px', width: '31px', marginLeft: '20px', }} href="https://www.linkedin.com/in/hans-accola-80b48b1b4/" target="_blank">
-          <LinkedInIcon className={classes.navIcons} style={{ width: '31px', height: '31px' }} />
+          <LinkedInIcon style={{ width: '30px', height: '30px', marginTop: '1px' }} />
         </a>
         <a class="nav-icons" style={{ height: '25px', width: '25px', marginLeft: '10px' }} href="https://www.github.com/ihansy/" target="_blank">
-          <GitHubIcon className={classes.navIcons} style={{ width: '25px', height: '25px' }} />
+          <GitHubIcon style={{ width: '25px', height: '25px' }} />
         </a>
       </div>
       <nav className="header-nav-links-container">
