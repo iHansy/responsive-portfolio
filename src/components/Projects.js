@@ -48,6 +48,7 @@ export default function Projects(props) {
     // Using hooks we're creating local state
     const [state, setState] = useState({
         projectDialog: false,
+        projectDialogContent: {},
         projects: [
             { name: 'Portfolio', description: '', url: '', img1: '/images/projects/portfolio-1.png' },
             { name: 'Adventure Hub', description: '', url: '', img1: '/images/projects/adventure-hub-1.png' },
@@ -58,8 +59,8 @@ export default function Projects(props) {
         ]
     });
 
-    function openProjectDialog() {
-        setState({ ...state, projectDialog: true });
+    function openProjectDialog(projectItem) {
+        setState({ ...state, projectDialog: true, projectDialogContent: projectItem });
     }
 
     function closeProjectDialog() {
@@ -84,7 +85,7 @@ export default function Projects(props) {
                     {state.projects.map((projectItem, i) => {
                         return (
                             <Grid item key={i} xs={12} md={6} >
-                                <Card elevation={3} className={classes.projectCard} onClick={openProjectDialog}>
+                                <Card elevation={3} className={classes.projectCard} onClick={() => openProjectDialog(projectItem)}>
                                     <CardMedia
                                         component="img"
                                         image={projectItem.img1}
@@ -99,16 +100,16 @@ export default function Projects(props) {
                     })}
                 </Grid>
             </Box>
-            <Dialog
-                open={state.projectDialog}
-                TransitionComponent={Transition}
-                keepMounted
-                onClose={closeProjectDialog}
-            >
-                <div style={{ height: '200px', width: '200px' }}>
-                    <h1>TESTING DIALOGUE</h1>
-                </div>
-            </Dialog>
+                 <Dialog
+                 open={state.projectDialog}
+                 TransitionComponent={Transition}
+                 keepMounted
+                 onClose={closeProjectDialog}
+                >
+                    <div style={{ height: '200px', width: '200px' }}>
+                        <h1>{ state.projectDialogContent.name }</h1>
+                    </div>
+                </Dialog>
         </div>
     );
 };
