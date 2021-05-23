@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { makeStyles, Grid, Box, Card, CardMedia, CardContent, Slide, Dialog, DialogTitle } from '@material-ui/core';
 import './Projects.css';
-import { fontFamily } from '@material-ui/system';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -54,7 +54,20 @@ export default function Projects(props) {
             { name: 'Portfolio', description: '', url: '', img1: '/images/projects/portfolio-1.png' },
             { name: 'Adventure Hub', description: '', url: '', img1: '/images/projects/adventure-hub-1.png' },
             { name: 'Friendly Wager', description: '', url: '', img1: '/images/projects/friendly-wager-1.png' },
-            { name: 'Feedback Tracker', description: '', url: '', img1: '/images/projects/feedback-tracker-1.png' },
+            {
+                name: 'Feedback Tracker',
+                description: '',
+                url: '',
+                img1: '/images/projects/feedback-tracker-1.png',
+                img2: '/images/projects/feedback-tracker-2.png',
+                img3: '/images/projects/feedback-tracker-3.png',
+                img4: '/images/projects/feedback-tracker-4.png',
+                img5: '/images/projects/feedback-tracker-5.png',
+                img6: '/images/projects/feedback-tracker-6.png',
+                img7: '/images/projects/feedback-tracker-7.png',
+                img8: '/images/projects/feedback-tracker-8.png',
+                img9: '/images/projects/feedback-tracker-9.png'
+            },
             { name: 'Task Manager', description: '', url: '', img1: '/images/projects/task-manager-1.png' },
             { name: 'Simple Calculator', description: '', url: '', img1: '/images/projects/simple-calculator-1.png' },
         ]
@@ -62,6 +75,13 @@ export default function Projects(props) {
 
     function openProjectDialog(projectItem) {
         setState({ ...state, projectDialog: true, projectDialogContent: projectItem });
+
+        axios.get('/img-files')
+            .then(res => {
+                const files = res.data;
+                console.log('testing files', files)
+            })
+
     }
 
     function closeProjectDialog() {
@@ -101,16 +121,16 @@ export default function Projects(props) {
                     })}
                 </Grid>
             </Box>
-                 <Dialog
-                 open={state.projectDialog}
-                 TransitionComponent={Transition}
-                 keepMounted
-                 fullWidth='true'
-                 maxWidth='md'
-                 onClose={closeProjectDialog}
-                >
-                        <DialogTitle style={{ fontFamily: 'Poppins' }}>{ state.projectDialogContent.name }</DialogTitle>
-                </Dialog>
+            <Dialog
+                open={state.projectDialog}
+                TransitionComponent={Transition}
+                keepMounted
+                fullWidth='true'
+                maxWidth='md'
+                onClose={closeProjectDialog}
+            >
+                <DialogTitle style={{ fontFamily: 'Poppins' }}>{state.projectDialogContent.name}</DialogTitle>
+            </Dialog>
         </div>
     );
 };
