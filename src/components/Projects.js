@@ -76,7 +76,7 @@ export default function Projects(props) {
     function openProjectDialog(projectItem) {
         setState({ ...state, projectDialog: true, projectDialogContent: projectItem });
 
-        axios.get('/img-files')
+        axios.get('/links')
             .then(res => {
                 const files = res.data;
                 console.log('testing files', files)
