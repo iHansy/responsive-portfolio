@@ -40,6 +40,11 @@ const theme = createMuiTheme({
       root: {
         padding: '12px 24px!important'
       }
+    },
+    MuiTypography: {
+      root: {
+        fontFamily: 'Poppins, sans-serif!important'
+      }
     }
   }
 });

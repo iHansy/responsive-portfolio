@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { makeStyles, Grid, Box, Card, CardMedia, CardContent, Slide, Dialog } from '@material-ui/core';
+import { makeStyles, Grid, Box, Card, CardMedia, CardContent, Slide, Dialog, DialogTitle } from '@material-ui/core';
 import './Projects.css';
+import { fontFamily } from '@material-ui/system';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -104,11 +105,11 @@ export default function Projects(props) {
                  open={state.projectDialog}
                  TransitionComponent={Transition}
                  keepMounted
+                 fullWidth='true'
+                 maxWidth='md'
                  onClose={closeProjectDialog}
                 >
-                    <div style={{ height: '200px', width: '200px' }}>
-                        <h1>{ state.projectDialogContent.name }</h1>
-                    </div>
+                        <DialogTitle style={{ fontFamily: 'Poppins' }}>{ state.projectDialogContent.name }</DialogTitle>
                 </Dialog>
         </div>
     );
