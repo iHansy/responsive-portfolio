@@ -50,6 +50,7 @@ export default function Projects(props) {
     const [state, setState] = useState({
         projectDialog: false,
         projectDialogContent: {},
+        fileReader: 'start',
         projects: [
             { name: 'Portfolio', description: '', url: '', img1: '/images/projects/portfolio-1.png' },
             { name: 'Adventure Hub', description: '', url: '', img1: '/images/projects/adventure-hub-1.png' },
@@ -76,17 +77,15 @@ export default function Projects(props) {
     function openProjectDialog(projectItem) {
         setState({ ...state, projectDialog: true, projectDialogContent: projectItem });
 
-        axios.get('/links')
-            .then(res => {
-                const files = res.data;
-                console.log('testing files', files)
-            })
-
-    }
-
+        fetch('http://localhost:5000/file-reader')
+            .then(res => res.text())
+            .then(res => setState({ ...state, fileReader: res }));
+        
+        console.log('TESTING FILEREADER', state.fileReader)
+    };
     function closeProjectDialog() {
         setState({ ...state, projectDialog: false });
-    }
+    };
 
     return (
         <div className="projects-container" id="Projects">
