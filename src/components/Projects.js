@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { makeStyles, Grid, Box, Card, CardMedia, CardContent, Slide, Dialog, DialogTitle } from '@material-ui/core';
 import './Projects.css';
 
@@ -77,10 +76,10 @@ export default function Projects(props) {
     function openProjectDialog(projectItem) {
         setState({ ...state, projectDialog: true, projectDialogContent: projectItem });
 
-        fetch('http://localhost:5000/file-reader')
+        fetch('http://localhost:5000/api/file-reader')
             .then(res => res.text())
             .then(res => setState({ ...state, fileReader: res }));
-        
+
         console.log('TESTING FILEREADER', state.fileReader)
     };
     function closeProjectDialog() {
