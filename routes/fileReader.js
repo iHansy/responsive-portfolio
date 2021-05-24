@@ -7,20 +7,20 @@ const fs = require('fs');
 const directoryPath = path.join('public/images/projects');
 
 router.get('/', function (req, res, next) {
-    console.log('TESTING FILEREADER');
+    const fileList = [];
 
     //passsing directoryPath and callback function
     fs.readdir(directoryPath, function (err, files) {
-        const fileList = [];
         //handling error
         if (err) {
             return console.log('Unable to scan directory: ' + err);
         }
-        for (file of files) {
+        files.forEach(function (file) {
             fileList.push(file);
-        }
+        });
+        console.log('API IMAGELIST', fileList)
     });
-    res.send(imageList);
+    res.send(fileList);
 });
 
 module.exports = router;

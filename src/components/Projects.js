@@ -49,27 +49,14 @@ export default function Projects(props) {
     const [state, setState] = useState({
         projectDialog: false,
         projectDialogContent: {},
-        fileReader: 'start',
+        fileList: [],
         projects: [
-            { name: 'Portfolio', description: '', url: '', img1: '/images/projects/portfolio-1.png' },
-            { name: 'Adventure Hub', description: '', url: '', img1: '/images/projects/adventure-hub-1.png' },
-            { name: 'Friendly Wager', description: '', url: '', img1: '/images/projects/friendly-wager-1.png' },
-            {
-                name: 'Feedback Tracker',
-                description: '',
-                url: '',
-                img1: '/images/projects/feedback-tracker-1.png',
-                img2: '/images/projects/feedback-tracker-2.png',
-                img3: '/images/projects/feedback-tracker-3.png',
-                img4: '/images/projects/feedback-tracker-4.png',
-                img5: '/images/projects/feedback-tracker-5.png',
-                img6: '/images/projects/feedback-tracker-6.png',
-                img7: '/images/projects/feedback-tracker-7.png',
-                img8: '/images/projects/feedback-tracker-8.png',
-                img9: '/images/projects/feedback-tracker-9.png'
-            },
-            { name: 'Task Manager', description: '', url: '', img1: '/images/projects/task-manager-1.png' },
-            { name: 'Simple Calculator', description: '', url: '', img1: '/images/projects/simple-calculator-1.png' },
+            { name: 'Portfolio', description: '', url: '', img: '/images/projects/portfolio-1.png' },
+            { name: 'Adventure Hub', description: '', url: '', img: '/images/projects/adventure-hub-1.png' },
+            { name: 'Friendly Wager', description: '', url: '', img: '/images/projects/friendly-wager-1.png' },
+            { name: 'Feedback Tracker', description: '', url: '', img: '/images/projects/feedback-tracker-1.png'},
+            { name: 'Task Manager', description: '', url: '', img: '/images/projects/task-manager-1.png' },
+            { name: 'Simple Calculator', description: '', url: '', img: '/images/projects/simple-calculator-1.png' }
         ]
     });
 
@@ -78,9 +65,9 @@ export default function Projects(props) {
 
         fetch('http://localhost:5000/api/file-reader')
             .then(res => res.text())
-            .then(res => setState({ ...state, fileReader: res }));
-
-        console.log('TESTING FILEREADER', state.fileReader)
+            .then(res => setState({ ...state, fileList: res }));
+        
+        console.log('TESTING FILELIST', state.fileList);
     };
     function closeProjectDialog() {
         setState({ ...state, projectDialog: false });
@@ -107,7 +94,7 @@ export default function Projects(props) {
                                 <Card elevation={3} className={classes.projectCard} onClick={() => openProjectDialog(projectItem)}>
                                     <CardMedia
                                         component="img"
-                                        image={projectItem.img1}
+                                        image={projectItem.img}
                                         title={projectItem.name}
                                     />
                                     <CardContent>
