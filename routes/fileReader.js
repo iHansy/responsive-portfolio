@@ -7,7 +7,8 @@ const fs = require('fs');
 const directoryPath = path.join('public/images/projects');
 
 router.get('/', function (req, res, next) {
-    const fileList = [];
+    let fileList = [];
+    const testing = [1, 2, 3];
 
     //passsing directoryPath and callback function
     fs.readdir(directoryPath, function (err, files) {
@@ -18,9 +19,10 @@ router.get('/', function (req, res, next) {
         files.forEach(function (file) {
             fileList.push(file);
         });
-        console.log('API IMAGELIST', fileList)
+        // console.log('API IMAGELIST', fileList)
     });
-    res.send(fileList);
+    console.log('API IMAGELIST', fileList)
+    res.send(testing);
 });
 
 module.exports = router;
