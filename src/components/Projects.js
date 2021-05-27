@@ -67,7 +67,7 @@ export default function Projects(props) {
             .then(res => res.text())
             .then(res => setState({ ...state, fileList: res }));
         
-        console.log('TESTING FILELIST', state.fileList);
+        console.log('TESTING FILELIST', JSON.parse(state.fileList));
     };
     function closeProjectDialog() {
         setState({ ...state, projectDialog: false });

@@ -8,21 +8,18 @@ const directoryPath = path.join('public/images/projects');
 
 router.get('/', function (req, res, next) {
     let fileList = [];
-    const testing = [1, 2, 3];
+    const testArray = [1, 2, 3, 4]
+    const files = fs.readdirSync(directoryPath);
 
-    //passsing directoryPath and callback function
-    fs.readdir(directoryPath, function (err, files) {
-        //handling error
-        if (err) {
-            return console.log('Unable to scan directory: ' + err);
-        }
-        files.forEach(function (file) {
+    for (const file of files) {
+        let fileStat = fs.statSync(directoryPath + '/' + file).isDirectory();
+        if(!fileStat) {
             fileList.push(file);
-        });
-        // console.log('API IMAGELIST', fileList)
-    });
-    console.log('API IMAGELIST', fileList)
-    res.send(testing);
+        }
+    };
+    console.log('FILELIST', fileList)
+    console.log(testArray)
+    res.send(fileList);
 });
 
 module.exports = router;
