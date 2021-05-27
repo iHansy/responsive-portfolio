@@ -48,26 +48,32 @@ export default function Projects(props) {
     // Using hooks we're creating local state
     const [state, setState] = useState({
         projectDialog: false,
-        projectDialogContent: {},
+        dialogItem: {},
         fileList: [],
         projects: [
-            { name: 'Portfolio', description: '', url: '', img: '/images/projects/portfolio-1.png' },
-            { name: 'Adventure Hub', description: '', url: '', img: '/images/projects/adventure-hub-1.png' },
-            { name: 'Friendly Wager', description: '', url: '', img: '/images/projects/friendly-wager-1.png' },
-            { name: 'Feedback Tracker', description: '', url: '', img: '/images/projects/feedback-tracker-1.png'},
-            { name: 'Task Manager', description: '', url: '', img: '/images/projects/task-manager-1.png' },
-            { name: 'Simple Calculator', description: '', url: '', img: '/images/projects/simple-calculator-1.png' }
+            { name: 'Portfolio', alias: 'portfolio', description: '', url: '', img1: '/images/projects/portfolio-1.png' },
+            { name: 'Adventure Hub', alias: 'adventure-hub', description: '', url: '', img1: '/images/projects/adventure-hub-1.png' },
+            { name: 'Friendly Wager', alias: 'friendly-wager', description: '', url: '', img1: '/images/projects/friendly-wager-1.png' },
+            { name: 'Feedback Tracker', alias: 'feedback-tracker', description: '', url: '', img1: '/images/projects/feedback-tracker-1.png'},
+            { name: 'Task Manager', alias: 'task-manager', description: '', url: '', img1: '/images/projects/task-manager-1.png' },
+            { name: 'Simple Calculator', alias: 'simple-calculator', description: '', url: '', img1: '/images/projects/simple-calculator-1.png' }
         ]
     });
 
     function openProjectDialog(projectItem) {
-        setState({ ...state, projectDialog: true, projectDialogContent: projectItem });
-
         fetch('http://localhost:5000/api/file-reader')
-            .then(res => res.text())
-            .then(res => setState({ ...state, fileList: res }));
+        .then(res => res.text())
+        .then(res => setState({ ...state, fileList: JSON.parse(res), projectDialog: true, dialogItem: projectItem }));
         
-        console.log('TESTING FILELIST', JSON.parse(state.fileList));
+        let imgNumb = 1;
+        for (let i = 0; i < state.fileList.length; i++) {
+            if (state.fileList[i].includes(state.dialogItem.alias) && !state.fileList[i].includes('-1')) {
+                imgNumb += 1;
+                const imgProperty = 'img' + imgNumb;
+                state.dialogItem[imgProperty] = state.fileList[i];
+            }
+        }
+        console.log(state.dialogItem);
     };
     function closeProjectDialog() {
         setState({ ...state, projectDialog: false });
@@ -94,7 +100,7 @@ export default function Projects(props) {
                                 <Card elevation={3} className={classes.projectCard} onClick={() => openProjectDialog(projectItem)}>
                                     <CardMedia
                                         component="img"
-                                        image={projectItem.img}
+                                        image={projectItem.img1}
                                         title={projectItem.name}
                                     />
                                     <CardContent>
@@ -114,7 +120,7 @@ export default function Projects(props) {
                 maxWidth='md'
                 onClose={closeProjectDialog}
             >
-                <DialogTitle style={{ fontFamily: 'Poppins' }}>{state.projectDialogContent.name}</DialogTitle>
+                <DialogTitle style={{ fontFamily: 'Poppins' }}>{state.dialogItem.name}</DialogTitle>
             </Dialog>
         </div>
     );

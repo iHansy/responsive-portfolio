@@ -8,7 +8,6 @@ const directoryPath = path.join('public/images/projects');
 
 router.get('/', function (req, res, next) {
     let fileList = [];
-    const testArray = [1, 2, 3, 4]
     const files = fs.readdirSync(directoryPath);
 
     for (const file of files) {
@@ -17,8 +16,6 @@ router.get('/', function (req, res, next) {
             fileList.push(file);
         }
     };
-    console.log('FILELIST', fileList)
-    console.log(testArray)
     res.send(fileList);
 });
 
