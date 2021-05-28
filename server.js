@@ -4,7 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const fileReaderRouter = require('./routes/fileReader');
+const fileReaderRouter = require('./routes/directoryReader');
 const cors = require('cors');
 
 const app = express();
@@ -20,7 +20,7 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api/file-reader', fileReaderRouter);
+app.use('/api/directory-reader', fileReaderRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

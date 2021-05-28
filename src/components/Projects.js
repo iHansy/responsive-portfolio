@@ -61,7 +61,7 @@ export default function Projects(props) {
     });
 
     function openProjectDialog(projectItem) {
-        fetch('http://localhost:5000/api/file-reader')
+        fetch('http://localhost:5000/api/directory-reader')
         .then(res => res.text())
         .then(res => setState({ ...state, fileList: JSON.parse(res), projectDialog: true, dialogItem: projectItem }));
         
@@ -70,7 +70,7 @@ export default function Projects(props) {
             if (state.fileList[i].includes(state.dialogItem.alias) && !state.fileList[i].includes('-1')) {
                 imgNumb += 1;
                 const imgProperty = 'img' + imgNumb;
-                state.dialogItem[imgProperty] = state.fileList[i];
+                state.dialogItem[imgProperty] = '/images/projects/' + state.fileList[i];
             }
         }
         console.log(state.dialogItem);
