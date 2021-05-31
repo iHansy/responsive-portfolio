@@ -6,7 +6,7 @@ const fs = require('fs');
 //joining path of directory 
 const directoryPath = path.join('public/images/projects');
 
-router.get('/', function (req, res, next) {
+router.get('/', function (req, res) {
     let fileList = [];
     const files = fs.readdirSync(directoryPath);
 
